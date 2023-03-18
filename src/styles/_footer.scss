@@ -1,0 +1,16 @@
+.footer{
+    padding-top: $p-2;
+    padding-bottom: $p-2;
+    font-weight: $font-w-400;
+    font-size: $font-14;
+    line-height: 21px;
+    color: $color-white-1;
+
+    &__rights {
+        float: left;
+    }
+
+    &__right {
+        float: right;
+    }
+}

@@ -1,0 +1,5 @@
+.header{
+    @include flex;
+    padding-top: $p-3;
+    padding-bottom: $p-3;
+}

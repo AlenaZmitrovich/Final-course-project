@@ -1,0 +1,12 @@
+.navbar{
+    &__lists{
+        @include flex;
+    }
+
+    &__link{
+        font-weight: $font-w-400;
+        font-size: $font-14;
+        color: $color-white;
+        margin-right: $m-3;
+    }
+}
