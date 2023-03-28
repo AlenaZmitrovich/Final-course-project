@@ -13,10 +13,36 @@ body {
 
     background: $primary-color;
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
+
+body {
+    animation-duration: 3s;
+    animation-name: slidein;
+}
+
+@keyframes slidein {
+    from {
+      margin-left: 100%;
+      width: 300%;
+    }
+  
+    to {
+      margin-left: 0%;
+      width: 100%;
+    }
+  }
 
 a:hover {
     text-decoration: none;
+    transition: 0.5s;
+    color: $color-hover;
+}
+
+button:hover {
+    text-decoration: none;
+    transition: 0.5s;
+    color: $color-hover;
 }
 
 .container {
@@ -43,6 +69,10 @@ a:hover {
 
 .s-5 {
     margin-top: 2rem;
+}
+
+.s-5:hover {
+    color: $color-white;
 }
 
 .poster {

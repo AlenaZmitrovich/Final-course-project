@@ -35,15 +35,18 @@
         </div>
 
         <nav class="navbar">
-            <ul class="navbar__lists">
+            <ul class="navbar__lists" id="menulist">
                 <li class="navbar__list"><a href="../index.html" class="navbar__link">Главная</a></li>
                 <li class="navbar__list"><a href="#" class="navbar__link">Меню</a></li>
                 <li class="navbar__list"><a href="./poster.html" class="navbar__link">Афиша</a></li>
                 <li class="navbar__list"><a href="./content.html" class="navbar__link">Сотрудничество</a></li>
                 <li class="navbar__list"><a href="./gallery.html" class="navbar__link">Галерея</a></li>
                 <li class="navbar__list"><a href="#" class="navbar__link">Новости</a></li>
+                <li class="navbar__list"><a href="#place" class="navbar__link">Контакты</a></li>
             </ul>
         </nav>
+
+        <a href="#" class="menu-icon btn" onclick="toggleOpenMenu()">Разделы</a>
 
         <div class="header__last-element">
             <a href="#" class="btn">Бронирование</a>
@@ -182,7 +185,7 @@
 
         <section class="container section-5">
 
-            <a href="#" class="btn-1">TOP "MANHATTAN" PLACE</a>
+            <a href="#" class="btn-1" name="place">TOP "MANHATTAN" PLACE</a>
 
             <h2 class="title">КОНТАКТЫ</h2>
 
@@ -206,7 +209,7 @@
                 </div>
 
                 <div class="section-5__block-2">
-                    <img src="../img/Rectangle 44.png" alt="">
+                    <img src="../img/Rectangle 44.png" alt="" class="section-5__image">
 
                 </div>
             </div>
@@ -233,5 +236,7 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 
     <script type="module" src="../js/swiper.js"></script>
+
+    <script src="../js/menu.js"></script>
 </body>
 </html>

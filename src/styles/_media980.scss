@@ -1,0 +1,13 @@
+@media only screen and (max-width: 980px) {
+    .section-1__poster {
+
+        &-container {
+            gap: 0.5rem;
+            margin: $m-3 $m-1 $m-7;
+        }
+    }
+
+    .section-5 {
+        margin-top: $m-3;
+    }
+}

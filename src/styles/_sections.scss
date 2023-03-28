@@ -44,6 +44,7 @@
         padding-top: 0;
         padding-right: 0;
     }
+    
     &__sub{
         font-weight: $font-w-700;
         font-size: $font-14;
@@ -202,10 +203,12 @@
         &:hover::before,
         &:hover::after {
             opacity: 1;
+            transition: 0.5s;
         }
 
         &:hover .section-1__poster-hovered {
             opacity: 1;
+            transition: 0.5s;
         }
     }
 
@@ -217,6 +220,10 @@
         margin-left: 1rem;
         text-align: left;
     }
+}
+
+h3 {
+    color: $color-white !important;
 }
 
 .section-1__content {
@@ -323,14 +330,17 @@
         &:hover::before,
         &:hover::after {
             opacity: 1;
+            transition: 0.5s;
         }
 
         &:hover .section__gallery-img {
             opacity: .8;
+            transition: 0.5s;
         }
 
         &:hover .section__gallery-vector {
             opacity: .8;
+            transition: 0.5s;
         }
     }
 
