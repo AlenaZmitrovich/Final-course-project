@@ -164,4 +164,16 @@
             gap: 2rem;
         }
     }
+
+    .card-body {
+        padding: $p-1;
+    }
+
+    .btn-primary {
+        padding: $p-0-5 $p-1;
+    }
+
+    .btn-news {
+        margin-left: $m-1;
+    }
 }

@@ -1,0 +1,14 @@
+.d-block {
+    height: 50% !important;
+    width: 50% !important;
+    max-height: 600px;
+    margin: 0 auto;
+}
+
+.carousel-caption {
+    width: 50%;
+    text-align: center;
+    margin: 0 auto;
+    padding: $p-1 $p-3;
+    background-color: $color-white-1;
+}

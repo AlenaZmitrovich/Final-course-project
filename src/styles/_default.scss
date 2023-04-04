@@ -14,12 +14,12 @@ body {
     background: $primary-color;
     overflow-x: hidden;
     scroll-behavior: smooth;
-}
 
-body {
     animation-duration: 3s;
     animation-name: slidein;
 }
+
+
 
 @keyframes slidein {
     from {

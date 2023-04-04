@@ -37,11 +37,11 @@
         <nav class="navbar">
             <ul class="navbar__lists" id="menulist">
                 <li class="navbar__list"><a href="../index.html" class="navbar__link">Главная</a></li>
-                <li class="navbar__list"><a href="#" class="navbar__link">Меню</a></li>
+                <li class="navbar__list"><a href="./menu.html" class="navbar__link">Меню</a></li>
                 <li class="navbar__list"><a href="./poster.html" class="navbar__link">Афиша</a></li>
                 <li class="navbar__list"><a href="./content.html" class="navbar__link">Сотрудничество</a></li>
                 <li class="navbar__list"><a href="./gallery.html" class="navbar__link">Галерея</a></li>
-                <li class="navbar__list"><a href="#" class="navbar__link">Новости</a></li>
+                <li class="navbar__list"><a href="./news.html" class="navbar__link">Новости</a></li>
                 <li class="navbar__list"><a href="#place" class="navbar__link">Контакты</a></li>
             </ul>
         </nav>
@@ -49,7 +49,40 @@
         <a href="#" class="menu-icon btn" onclick="toggleOpenMenu()">Разделы</a>
 
         <div class="header__last-element">
-            <a href="#" class="btn">Бронирование</a>
+            <button type="button" class="btn btn-modal" data-toggle="modal" data-target=".bd-example-modal-lg">Бронирование</button>
+
+                <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <form class="form">
+                                <div class="mb-3">
+                                  <label for="exampleInputName" class="form-label navbar__link">Укажите ваше имя и фамилию</label>
+                                  <input type="text" class="form-control navbar__link" id="exampleInputName" aria-describedby="nameHelp">
+                                </div>
+                                <div class="mb-3">
+                                  <label for="exampleInputPhone" class="form-label navbar__link">Контактный номер телефона</label>
+                                  <input type="phone" class="form-control navbar__link" id="exampleInputPhone">
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleFormControlSelect1" class="form-label navbar__link">Количество гостей</label>
+                                    <select class="form-control navbar__link" id="exampleFormControlSelect1">
+                                      <option class="navbar__link">1</option>
+                                      <option class="navbar__link">2</option>
+                                      <option class="navbar__link">3</option>
+                                      <option class="navbar__link">4</option>
+                                      <option class="navbar__link">5</option>
+                                    </select>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleInputName" class="form-label navbar__link">Дата и время брони</label>
+                                    <input type="data" class="form-control navbar__link" id="exampleInputData" aria-describedby="dataHelp">
+                                </div>
+                                
+                                <button type="submit" class="btn btn-primary">Отправить</button>
+                              </form>
+                        </div>
+                    </div>
+                </div>
         </div>
 
     </header>

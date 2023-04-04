@@ -66,9 +66,6 @@ body {
   background: #333333;
   overflow-x: hidden;
   scroll-behavior: smooth;
-}
-
-body {
   animation-duration: 3s;
   animation-name: slidein;
 }
@@ -142,6 +139,29 @@ hr {
   border-radius: 5px;
   padding: 1rem 2rem;
 }
+.btn-modal {
+  background-color: #333333;
+}
+.btn-modal:hover {
+  background-color: #333333;
+  color: blue !important;
+  border-color: #D5621D;
+}
+.btn-primary {
+  background-color: #333333;
+}
+.btn-primary:hover {
+  background-color: #333333;
+  color: blue !important;
+  border-color: #D5621D;
+}
+.btn-news {
+  margin-left: 3rem;
+  margin-bottom: 1rem;
+}
+.btn-news_margin {
+  margin-top: 1rem;
+}
 
 .btn-1 {
   background-color: #ffffff;
@@ -193,10 +213,12 @@ hr {
 
 .swiper-button-prev,
 .swiper-button-next {
-  color: #ffffff;
-  background-color: #D5621D;
-  padding: 2rem 1.5rem;
-  border-radius: 5px;
+  color: #D5621D;
+  opacity: 0.3;
+}
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  opacity: 0.7;
 }
 
 .card {
@@ -219,6 +241,44 @@ hr {
 
 .mb-0 {
   text-align: left;
+}
+
+.d-block {
+  height: 50% !important;
+  width: 50% !important;
+  max-height: 600px;
+  margin: 0 auto;
+}
+
+.carousel-caption {
+  width: 50%;
+  text-align: center;
+  margin: 0 auto;
+  padding: 1rem 3rem;
+  background-color: rgba(106, 70, 70, 0.5);
+}
+
+.form {
+  padding: 3rem;
+  background-color: #333333;
+}
+.form-label {
+  padding: 1rem 0;
+}
+
+option {
+  background-color: #D5621D;
+}
+
+input,
+select {
+  background-color: #D5621D !important;
+  border-color: #D5621D !important;
+}
+input:focus,
+select:focus {
+  color: #ffffff !important;
+  background-color: #D5621D !important;
 }
 
 .navbar__lists {
@@ -632,6 +692,11 @@ h3 {
   opacity: 0;
 }
 
+.section__menu {
+  text-align: center;
+  margin-top: 3rem;
+}
+
 .footer {
   padding-top: 2rem;
   padding-bottom: 2rem;
@@ -691,6 +756,9 @@ h3 {
     background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../img/Rectangle\ 39.png);
     background-position: left top;
     margin: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
   }
   .section-3__text-block {
     width: 50%;
@@ -745,6 +813,16 @@ h3 {
   .section-1__content {
     margin: 3rem 0 7rem 0;
   }
+  .section__menu {
+    margin-bottom: 7rem;
+  }
+  .carousel {
+    margin-top: 3rem;
+  }
+  .section__news {
+    margin-bottom: 7rem;
+    padding-right: 4rem;
+  }
 }
 @media only screen and (max-width: 980px) {
   .section-1__poster-container {
@@ -753,6 +831,23 @@ h3 {
   }
   .section-5 {
     margin-top: 3rem;
+  }
+  .products-1 {
+    margin: 0 0 0 2rem;
+  }
+  .products-2 {
+    margin: 0 3rem 0 0;
+  }
+  .section__gallery {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+  .section__gallery-block {
+    grid-template-columns: 1fr 1fr;
+    gap: 7rem 0;
+  }
+  .footer {
+    padding: 1rem 3rem;
   }
 }
 @media only screen and (max-width: 768px) {
@@ -882,15 +977,61 @@ h3 {
     margin: 2rem 2rem 7rem;
     gap: 2rem;
   }
+  .card-body {
+    padding: 1rem;
+  }
+  .btn-primary {
+    padding: 0.5rem 1rem;
+  }
+  .btn-news {
+    margin-left: 1rem;
+  }
+}
+@media only screen and (max-width: 662px) {
+  .header {
+    display: block;
+    text-align: center;
+  }
+  .menu-icon {
+    display: inline-block;
+  }
+  .product {
+    display: block;
+  }
+  .products {
+    width: 100%;
+    padding: 1rem 4rem 0 3rem;
+  }
+  .section-4__blocks {
+    padding-right: 7rem;
+  }
+  .section-4__block {
+    margin: 1rem 0;
+  }
+  .section-5__image {
+    width: 40rem;
+  }
+  .section-5__block-1 {
+    width: auto;
+  }
+  .footer {
+    height: 3rem;
+  }
+  .section__gallery-block {
+    gap: 1rem;
+  }
+  .btn-primary {
+    letter-spacing: normal;
+  }
 }
 @media only screen and (max-width: 480px) {
   .header {
     display: block;
     text-align: center;
-    margin-top: 1rem;
+    margin-top: 2rem;
   }
   .menu-icon {
-    margin: 1rem 0;
+    margin: 2rem 0;
     display: inline-block;
   }
   .section-1 {
@@ -912,12 +1053,16 @@ h3 {
     width: 100%;
     padding: 0 3rem;
   }
+  .products__item {
+    margin: 3rem 0;
+  }
   .section-3__text-block {
     width: 100%;
     margin: 0;
     padding: 3rem;
   }
   .section-4__blocks {
+    padding-right: 0;
     flex-direction: column-reverse;
     align-items: center;
     width: 100%;
@@ -945,6 +1090,9 @@ h3 {
     width: fit-content;
     justify-self: center;
   }
+  .section-1__content {
+    margin-top: 7rem;
+  }
   .section-1__content-block {
     margin: 2rem;
   }
@@ -952,7 +1100,34 @@ h3 {
     width: auto;
     margin: 0 1rem 0 3rem;
   }
+  .section__gallery {
+    margin-top: 7rem;
+  }
   .section__gallery-block {
     grid-template-columns: 1fr;
+  }
+  .section__menu {
+    margin-top: 5rem;
+  }
+  .footer {
+    padding: 2rem;
+  }
+  .btn-news {
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+}
+@media only screen and (max-width: 390px) {
+  .products__item {
+    flex-direction: column;
+    margin: 3rem 0;
+  }
+  .products__top {
+    flex-direction: column;
+    margin: 1rem 0;
+    gap: 1rem;
+  }
+  .products__bottom {
+    text-align: center;
   }
 }/*# sourceMappingURL=main.css.map */

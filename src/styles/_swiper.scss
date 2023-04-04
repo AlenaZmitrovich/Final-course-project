@@ -1,7 +1,9 @@
 .swiper-button-prev,
 .swiper-button-next {
-    color: $color-white;
-    background-color: $secondary-color;
-    padding: 2rem 1.5rem;
-    border-radius: 5px;
+    color: $secondary-color;
+    opacity: .3;
+
+    &:hover {
+        opacity: .7;
+    }
 }

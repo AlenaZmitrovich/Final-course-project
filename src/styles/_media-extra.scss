@@ -1,0 +1,55 @@
+@media only screen and (max-width: 662px) {
+
+    .header {
+        display: block;
+        text-align: center;
+    }
+
+    .menu-icon {
+        display: inline-block;
+    }
+
+    .product {
+        display: block;
+       }
+
+    .products {
+        width: 100%;
+        padding: 1rem 4rem 0 3rem;
+       }
+
+    .section-4 {
+        
+        &__blocks {
+            padding-right: $p-7;
+        }
+
+        &__block {
+            margin: $m-1 0;
+
+        }
+    }
+
+    .section-5 {
+
+        &__image {
+            width: 40rem;
+        }
+
+        &__block-1 {
+            width: auto;
+        }
+    }
+
+    .footer {
+        height: 3rem;
+    }
+
+    .section__gallery-block {
+        gap: 1rem;
+    }
+
+    .btn-primary {
+        letter-spacing:normal;
+    }
+}

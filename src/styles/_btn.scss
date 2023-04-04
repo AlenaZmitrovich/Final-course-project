@@ -6,6 +6,35 @@
     border: 2px solid $secondary-color;
     border-radius: 5px;
     padding: $p-1 $p-2;
+
+    &-modal {
+        background-color: $primary-color;
+
+        &:hover {
+            background-color: $primary-color;
+            color: $color-hover !important;
+            border-color: $secondary-color;
+        }
+    }
+
+    &-primary {
+        background-color: $primary-color;
+
+        &:hover {
+            background-color: $primary-color;
+            color: $color-hover !important;
+            border-color: $secondary-color;
+        }
+    }
+
+    &-news {
+        margin-left: $m-3;
+        margin-bottom: $m-1;
+
+        &_margin {
+            margin-top: $m-1;
+        }
+    }
 }
 
 .btn-1{

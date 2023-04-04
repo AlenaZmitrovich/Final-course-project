@@ -2,11 +2,11 @@
     .header {
         display: block;
         text-align: center;
-        margin-top: $m-1;
+        margin-top: $m-2;
     }
 
     .menu-icon {
-        margin: $m-1 0;
+        margin: $m-2 0;
         display: inline-block;
     }
 
@@ -33,6 +33,10 @@
    .products {
     width: 100%;
     padding: 0 $p-3;
+
+    &__item {
+        margin: $m-3 0;
+    }
    }
 
    .section-3 {
@@ -47,6 +51,7 @@
    .section-4 {
 
     &__blocks {
+        padding-right: 0;
         flex-direction: column-reverse;
         align-items: center;
         width: 100%;
@@ -83,6 +88,7 @@
    }
 
    .section-1__content {
+    margin-top: $m-7;
 
     &-block {
         margin: $m-2;
@@ -95,9 +101,22 @@
    }
 
    .section__gallery {
+        margin-top: $m-7;
 
     &-block {
         grid-template-columns: 1fr;
     }
+   }
+
+   .section__menu {
+    margin-top: $m-5;
+   }
+
+   .footer {
+    padding: $p-2;
+   }
+
+   .btn-news {
+    width:fit-content;
    }
 }

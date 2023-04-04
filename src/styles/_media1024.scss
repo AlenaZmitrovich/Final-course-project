@@ -53,6 +53,10 @@
         background-image: linear-gradient(0deg, rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url(../img/Rectangle\ 39.png);
         background-position: left top;
         margin: 0;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: top;
+   
 
         &__text-block {
             width: calc(100% / 2);
@@ -120,5 +124,18 @@
 
     .section-1__content {
         margin: $m-3 0 $m-7 0;
+    }
+
+    .section__menu {
+        margin-bottom: $m-7;
+    }
+
+    .carousel {
+        margin-top: $m-3;
+    }
+
+    .section__news {
+        margin-bottom: $m-7;
+        padding-right: $p-4;
     }
 }
