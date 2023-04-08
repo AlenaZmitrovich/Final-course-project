@@ -58,21 +58,13 @@ button:hover {
 
     margin-top: $m-4;
     margin-bottom: $m-4;
-}
 
-.s-4 {
-    margin: $m-2;
-    margin-bottom: $m-3;
-    font-size: $font-32;
-    line-height: 48px;
-}
-
-.s-5 {
-    margin-top: 2rem;
-}
-
-.s-5:hover {
-    color: $color-white;
+    &_s-4 {
+        margin: $m-2;
+        margin-bottom: $m-3;
+        font-size: $font-32;
+        line-height: 48px;
+    }
 }
 
 .poster {

@@ -49,13 +49,13 @@
         flex-direction: column;
         margin: 0;
 
-        &__first-element {
+        &-first-element {
             height: 35rem;
             margin: 0 0 $m-3 0;
             width: 77%;
         }
 
-        &__second-element {
+        &-second-element {
             flex-basis: 100%;
         }
     }
@@ -67,11 +67,11 @@
     .products {
         margin: 0;
 
-        &__item {
+        &-item {
             margin: $m-1 0 0 0;
         }
 
-        &__photo {
+        &-photo {
             margin: 0 $m-1;
         }
 
@@ -86,13 +86,13 @@
         flex-direction: column;
         position: relative;
 
-        &__text-block {
+        &-text-block {
             width: auto;
             z-index: 2;
             margin-top: $m-3;
         }
 
-        &__image {
+        &-image {
             width: 100%;
             margin: 0 auto;
             position: absolute;
@@ -109,12 +109,12 @@
     .section-4 {
         margin-top: $m-10;
 
-        &__blocks {
+        &-blocks {
             justify-content: space-around;
             width: 50rem;
         }
 
-        &__two-blocks {
+        &-two-blocks {
             flex-direction: column;
         }
     }
@@ -123,11 +123,11 @@
         margin-top: 28px;
     }
 
-    .section-5 {
+    .section-contacts {
         margin-top: $m-3;
         height: 90rem;
 
-        &__blocks {
+        &-blocks {
             flex-direction: column-reverse;
         }
 
@@ -136,13 +136,13 @@
             margin: 3rem 0;
         }
 
-        &__block-1 {
+        &-block-1 {
             width: 100%;
             margin: 0;
             height: auto;
         }
 
-        .s-5 {
+        .section-contacts__text {
             margin-top: $m-1;
         }
     }
@@ -173,7 +173,7 @@
         padding: $p-0-5 $p-1;
     }
 
-    .btn-news {
+    .btn_news {
         margin-left: $m-1;
     }
 }

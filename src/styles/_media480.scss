@@ -13,11 +13,11 @@
     .section-1 {
         margin-top: $m-1;
 
-        &__first-element {
+        &-first-element {
             width: 100%;
         }
 
-        &__second-element {
+        &-second-element {
             width: 100%;
         }
     }
@@ -34,14 +34,14 @@
     width: 100%;
     padding: 0 $p-3;
 
-    &__item {
+    &-item {
         margin: $m-3 0;
     }
    }
 
    .section-3 {
 
-    &__text-block {
+    &-text-block {
         width: 100%;
         margin: 0;
         padding: $p-3;
@@ -50,26 +50,26 @@
 
    .section-4 {
 
-    &__blocks {
+    &-blocks {
         padding-right: 0;
         flex-direction: column-reverse;
         align-items: center;
         width: 100%;
     }
 
-    &__block {
+    &-block {
         width: 100%;
     }
    }
 
-   .section-5 {
+   .section-contacts {
     height: 80rem;
     
     &__image {
         width: 90%;
     }
 
-    &__block-1 {
+    &-block-1 {
         width: 90%;
     }
    }
@@ -87,20 +87,20 @@
     }
    }
 
-   .section-1__content {
+   .section-content {
     margin-top: $m-7;
 
     &-block {
         margin: $m-2;
     }
 
-    &-lists {
+    &__lists {
         width: auto;
         margin: 0 $m-1 0 $m-3;
     }
    }
 
-   .section__gallery {
+   .section-gallery {
         margin-top: $m-7;
 
     &-block {
@@ -108,7 +108,7 @@
     }
    }
 
-   .section__menu {
+   .section-menu {
     margin-top: $m-5;
    }
 
@@ -116,7 +116,7 @@
     padding: $p-2;
    }
 
-   .btn-news {
+   .btn_news {
     width:fit-content;
    }
 }

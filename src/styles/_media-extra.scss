@@ -20,23 +20,23 @@
 
     .section-4 {
         
-        &__blocks {
+        &-blocks {
             padding-right: $p-7;
         }
 
-        &__block {
+        &-block {
             margin: $m-1 0;
 
         }
     }
 
-    .section-5 {
+    .section-contacts {
 
         &__image {
             width: 40rem;
         }
 
-        &__block-1 {
+        &-block-1 {
             width: auto;
         }
     }
@@ -52,4 +52,8 @@
     .btn-primary {
         letter-spacing:normal;
     }
+
+    .btn_news {
+        width:fit-content;
+       }
 }

@@ -2,18 +2,18 @@
 
     .products {
     
-        &__item {
+        &-item {
             flex-direction: column;
             margin: $m-3 0;
         }
 
-        &__top {
+        &-top {
             flex-direction: column;
             margin: $m-1 0;
             gap: 1rem;
         }
 
-        &__bottom {
+        &-bottom {
             text-align: center;
         }
     }

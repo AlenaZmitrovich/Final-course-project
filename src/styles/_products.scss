@@ -8,15 +8,15 @@
     margin-left: $m-4;
     margin-right: $m-4;
 
-    &__item{
+    &-item{
         @include flex();
     }
 
-    &__photo{
+    &-photo{
         margin: $m-2;
     }
 
-    &__top{
+    &-top{
         @include flex();
     }
 
@@ -28,7 +28,7 @@
         color: $color-white;
     }
 
-    &__bottom{
+    &-bottom{
         text-align: left;
     }
 

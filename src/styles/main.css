@@ -106,20 +106,11 @@ button:hover {
   margin-top: 4rem;
   margin-bottom: 4rem;
 }
-
-.s-4 {
+.title_s-4 {
   margin: 2rem;
   margin-bottom: 3rem;
   font-size: 32px;
   line-height: 48px;
-}
-
-.s-5 {
-  margin-top: 2rem;
-}
-
-.s-5:hover {
-  color: #ffffff;
 }
 
 .poster {
@@ -155,11 +146,11 @@ hr {
   color: blue !important;
   border-color: #D5621D;
 }
-.btn-news {
+.btn_news {
   margin-left: 3rem;
   margin-bottom: 1rem;
 }
-.btn-news_margin {
+.btn_news--margin {
   margin-top: 1rem;
 }
 
@@ -305,15 +296,15 @@ select:focus {
   margin-left: 4rem;
   margin-right: 4rem;
 }
-.products__item {
+.products-item {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.products__photo {
+.products-photo {
   margin: 2rem;
 }
-.products__top {
+.products-top {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -325,7 +316,7 @@ select:focus {
   letter-spacing: 0.1rem;
   color: #ffffff;
 }
-.products__bottom {
+.products-bottom {
   text-align: left;
 }
 .products__weight {
@@ -360,10 +351,10 @@ select:focus {
   justify-content: space-between;
   align-items: center;
 }
-.section-1__first-element {
+.section-1-first-element {
   width: 66.6666666667%;
   height: 40rem;
-  background-image: url("../img/Rectangle 30.png");
+  background-image: url("../img/home_page/section-1-main.png");
   padding: 3rem;
   position: relative;
   margin-right: 2rem;
@@ -390,7 +381,7 @@ select:focus {
   position: absolute;
   top: 20rem;
 }
-.section-1__second-element {
+.section-1-second-element {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1rem;
@@ -444,7 +435,7 @@ select:focus {
   margin-top: 10rem;
   margin-bottom: 10rem;
 }
-.section-3__text-block {
+.section-3-text-block {
   width: 33.3333333333%;
   text-align: center;
   margin: 2rem;
@@ -459,24 +450,24 @@ select:focus {
 .section-4 {
   text-align: center;
 }
-.section-4__blocks {
+.section-4-blocks {
   display: flex;
   justify-content: space-between;
   align-items: center;
   align-items: flex-start;
 }
-.section-4__block {
+.section-4-block {
   width: 50%;
   text-align: center;
   margin: 2rem;
 }
-.section-4__two-blocks {
+.section-4-two-blocks {
   display: flex;
   justify-content: space-between;
   align-items: center;
   justify-content: center;
 }
-.section-4__one-block {
+.section-4-one-block {
   margin: 1rem;
 }
 .section-4__names {
@@ -488,24 +479,24 @@ select:focus {
   color: #ffffff;
   margin: 2rem;
 }
-.section-4__media {
+.section-4-media {
   display: flex;
   justify-content: space-between;
   align-items: center;
   justify-content: space-around;
 }
 
-.section-5 {
+.section-contacts {
   margin-top: 10rem;
   text-align: center;
 }
-.section-5__blocks {
+.section-contacts-blocks {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 7rem;
 }
-.section-5__block-1 {
+.section-contacts-block-1 {
   width: 33.3333333333%;
   text-align: left;
   border: 2px solid #D5621D;
@@ -515,6 +506,16 @@ select:focus {
   background-color: rgba(213, 98, 29, 0.1);
   margin-right: 2rem;
   height: 656px;
+}
+.section-contacts__text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  color: #ffffff;
+  margin-top: 2rem;
+}
+.section-contacts__text:hover {
+  color: #ffffff;
 }
 
 .section-1__poster {
@@ -572,12 +573,12 @@ h3 {
   color: #ffffff !important;
 }
 
-.section-1__content {
+.section-content {
   text-align: center;
   margin-top: 3rem;
   margin-bottom: 10rem;
 }
-.section-1__content-title {
+.section-content__title {
   font-weight: 700;
   font-size: 24px;
   line-height: 36px;
@@ -587,17 +588,17 @@ h3 {
   margin-top: 5rem;
   margin-bottom: 2rem;
 }
-.section-1__content-blocks {
+.section-content-blocks {
   display: flex;
   justify-content: space-between;
   align-items: center;
   justify-content: center;
   align-items: flex-end;
 }
-.section-1__content-block {
+.section-content-block {
   margin: 5rem;
 }
-.section-1__content-description {
+.section-content__description {
   font-weight: 400;
   font-size: 20px;
   line-height: 30px;
@@ -605,31 +606,31 @@ h3 {
   color: #ffffff;
   margin-top: 3rem;
 }
-.section-1__content-lists {
+.section-content__lists {
   list-style-type: square;
   width: 40rem;
   margin: 0 auto;
   margin-top: 4rem;
 }
-.section-1__content-list {
+.section-content__list {
   color: #D5621D;
   font-size: 32px;
   text-align: left;
   margin: 1rem;
 }
-.section-1__content-list_style {
+.section-content__list_style {
   font-weight: 400;
   font-size: 18px;
   line-height: 27px;
   color: #ffffff;
 }
 
-.section__gallery {
+.section-gallery {
   text-align: center;
   margin-top: 3rem;
   margin-bottom: 10rem;
 }
-.section__gallery-block {
+.section-gallery-block {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   justify-items: center;
@@ -640,7 +641,7 @@ h3 {
   margin-top: 7rem;
   margin-bottom: 10rem;
 }
-.section__gallery-blocks {
+.section-gallery-blocks {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -648,7 +649,7 @@ h3 {
   position: relative;
   transition: all 0.3s;
 }
-.section__gallery-blocks::after {
+.section-gallery-blocks::after {
   content: "";
   position: absolute;
   top: 0;
@@ -658,7 +659,7 @@ h3 {
   background: rgba(0, 0, 0, 0.9);
   opacity: 0;
 }
-.section__gallery-blocks::before {
+.section-gallery-blocks::before {
   content: "";
   position: absolute;
   top: 0;
@@ -667,24 +668,24 @@ h3 {
   bottom: 0;
   opacity: 0;
 }
-.section__gallery-blocks:hover::before, .section__gallery-blocks:hover::after {
+.section-gallery-blocks:hover::before, .section-gallery-blocks:hover::after {
   opacity: 1;
   transition: 0.5s;
 }
-.section__gallery-blocks:hover .section__gallery-img {
+.section-gallery-blocks:hover .section-gallery__img {
   opacity: 0.8;
   transition: 0.5s;
 }
-.section__gallery-blocks:hover .section__gallery-vector {
+.section-gallery-blocks:hover .section-gallery__vector {
   opacity: 0.8;
   transition: 0.5s;
 }
-.section__gallery-img {
+.section-gallery__img {
   position: absolute;
   z-index: 2;
   opacity: 0;
 }
-.section__gallery-vector {
+.section-gallery__vector {
   position: absolute;
   z-index: 3;
   top: 11.4rem;
@@ -692,7 +693,7 @@ h3 {
   opacity: 0;
 }
 
-.section__menu {
+.section-menu {
   text-align: center;
   margin-top: 3rem;
 }
@@ -753,18 +754,18 @@ h3 {
   }
   .section-3 {
     position: relative;
-    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../img/Rectangle\ 39.png);
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../img/home_page/section-3.png);
     background-position: left top;
     margin: 0;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top;
   }
-  .section-3__text-block {
+  .section-3-text-block {
     width: 50%;
     z-index: 2;
   }
-  .section-3__image {
+  .section-3-image {
     display: none;
     width: 100%;
     position: absolute;
@@ -775,29 +776,29 @@ h3 {
   .section-4 {
     margin: 7rem 0;
   }
-  .section-5 {
+  .section-contacts {
     margin: 0;
     height: 90rem;
   }
-  .section-5__blocks {
+  .section-contacts-blocks {
     flex-direction: column-reverse;
   }
-  .section-5__image {
+  .section-contacts__image {
     width: 50rem;
     margin: 3rem 0;
   }
-  .section-5__block-1 {
+  .section-contacts-block-1 {
     width: 40rem;
     margin: 0;
     height: auto;
   }
-  .section-5 .s-5 {
+  .section-contacts .section-contacts__text {
     margin-top: 1rem;
   }
-  .section__gallery {
+  .section-gallery {
     margin: 3rem 0 7rem 0;
   }
-  .section__gallery-block {
+  .section-gallery-block {
     grid-template-columns: 1fr 1fr 1fr;
     gap: 1rem;
     margin-top: 3rem;
@@ -810,16 +811,16 @@ h3 {
     gap: 1rem;
     margin: 3rem 0 0 0;
   }
-  .section-1__content {
+  .section-content {
     margin: 3rem 0 7rem 0;
   }
-  .section__menu {
+  .section-menu {
     margin-bottom: 7rem;
   }
   .carousel {
     margin-top: 3rem;
   }
-  .section__news {
+  .section-news {
     margin-bottom: 7rem;
     padding-right: 4rem;
   }
@@ -829,7 +830,7 @@ h3 {
     gap: 0.5rem;
     margin: 3rem 1rem 7rem;
   }
-  .section-5 {
+  .section-contacts {
     margin-top: 3rem;
   }
   .products-1 {
@@ -838,11 +839,11 @@ h3 {
   .products-2 {
     margin: 0 3rem 0 0;
   }
-  .section__gallery {
+  .section-gallery {
     padding-left: 4rem;
     padding-right: 4rem;
   }
-  .section__gallery-block {
+  .section-gallery-block {
     grid-template-columns: 1fr 1fr;
     gap: 7rem 0;
   }
@@ -890,12 +891,12 @@ h3 {
     flex-direction: column;
     margin: 0;
   }
-  .section-1__first-element {
+  .section-1-first-element {
     height: 35rem;
     margin: 0 0 3rem 0;
     width: 77%;
   }
-  .section-1__second-element {
+  .section-1-second-element {
     flex-basis: 100%;
   }
   .section-2 {
@@ -904,10 +905,10 @@ h3 {
   .products {
     margin: 0;
   }
-  .products__item {
+  .products-item {
     margin: 1rem 0 0 0;
   }
-  .products__photo {
+  .products-photo {
     margin: 0 1rem;
   }
   .products__price {
@@ -919,12 +920,12 @@ h3 {
     flex-direction: column;
     position: relative;
   }
-  .section-3__text-block {
+  .section-3-text-block {
     width: auto;
     z-index: 2;
     margin-top: 3rem;
   }
-  .section-3__image {
+  .section-3-image {
     width: 100%;
     margin: 0 auto;
     position: absolute;
@@ -938,33 +939,33 @@ h3 {
   .section-4 {
     margin-top: 10rem;
   }
-  .section-4__blocks {
+  .section-4-blocks {
     justify-content: space-around;
     width: 50rem;
   }
-  .section-4__two-blocks {
+  .section-4-two-blocks {
     flex-direction: column;
   }
   .s-4 {
     margin-top: 28px;
   }
-  .section-5 {
+  .section-contacts {
     margin-top: 3rem;
     height: 90rem;
   }
-  .section-5__blocks {
+  .section-contacts-blocks {
     flex-direction: column-reverse;
   }
-  .section-5__image {
+  .section-contacts__image {
     width: 50rem;
     margin: 3rem 0;
   }
-  .section-5__block-1 {
+  .section-contacts-block-1 {
     width: 100%;
     margin: 0;
     height: auto;
   }
-  .section-5 .s-5 {
+  .section-contacts .section-contacts__text {
     margin-top: 1rem;
   }
   .section__gallery-block {
@@ -983,7 +984,7 @@ h3 {
   .btn-primary {
     padding: 0.5rem 1rem;
   }
-  .btn-news {
+  .btn_news {
     margin-left: 1rem;
   }
 }
@@ -1002,16 +1003,16 @@ h3 {
     width: 100%;
     padding: 1rem 4rem 0 3rem;
   }
-  .section-4__blocks {
+  .section-4-blocks {
     padding-right: 7rem;
   }
-  .section-4__block {
+  .section-4-block {
     margin: 1rem 0;
   }
-  .section-5__image {
+  .section-contacts__image {
     width: 40rem;
   }
-  .section-5__block-1 {
+  .section-contacts-block-1 {
     width: auto;
   }
   .footer {
@@ -1022,6 +1023,10 @@ h3 {
   }
   .btn-primary {
     letter-spacing: normal;
+  }
+  .btn_news {
+    width: -moz-fit-content;
+    width: fit-content;
   }
 }
 @media only screen and (max-width: 480px) {
@@ -1037,10 +1042,10 @@ h3 {
   .section-1 {
     margin-top: 1rem;
   }
-  .section-1__first-element {
+  .section-1-first-element {
     width: 100%;
   }
-  .section-1__second-element {
+  .section-1-second-element {
     width: 100%;
   }
   .container {
@@ -1053,30 +1058,30 @@ h3 {
     width: 100%;
     padding: 0 3rem;
   }
-  .products__item {
+  .products-item {
     margin: 3rem 0;
   }
-  .section-3__text-block {
+  .section-3-text-block {
     width: 100%;
     margin: 0;
     padding: 3rem;
   }
-  .section-4__blocks {
+  .section-4-blocks {
     padding-right: 0;
     flex-direction: column-reverse;
     align-items: center;
     width: 100%;
   }
-  .section-4__block {
+  .section-4-block {
     width: 100%;
   }
-  .section-5 {
+  .section-contacts {
     height: 80rem;
   }
-  .section-5__image {
+  .section-contacts__image {
     width: 90%;
   }
-  .section-5__block-1 {
+  .section-contacts-block-1 {
     width: 90%;
   }
   .section-1__poster {
@@ -1090,44 +1095,44 @@ h3 {
     width: fit-content;
     justify-self: center;
   }
-  .section-1__content {
+  .section-content {
     margin-top: 7rem;
   }
-  .section-1__content-block {
+  .section-content-block {
     margin: 2rem;
   }
-  .section-1__content-lists {
+  .section-content__lists {
     width: auto;
     margin: 0 1rem 0 3rem;
   }
-  .section__gallery {
+  .section-gallery {
     margin-top: 7rem;
   }
-  .section__gallery-block {
+  .section-gallery-block {
     grid-template-columns: 1fr;
   }
-  .section__menu {
+  .section-menu {
     margin-top: 5rem;
   }
   .footer {
     padding: 2rem;
   }
-  .btn-news {
+  .btn_news {
     width: -moz-fit-content;
     width: fit-content;
   }
 }
 @media only screen and (max-width: 390px) {
-  .products__item {
+  .products-item {
     flex-direction: column;
     margin: 3rem 0;
   }
-  .products__top {
+  .products-top {
     flex-direction: column;
     margin: 1rem 0;
     gap: 1rem;
   }
-  .products__bottom {
+  .products-bottom {
     text-align: center;
   }
 }/*# sourceMappingURL=main.css.map */

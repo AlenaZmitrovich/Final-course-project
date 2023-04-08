@@ -1,10 +1,10 @@
 .section-1{
     @include flex();
 
-    &__first-element{
+    &-first-element{
         width: calc(100% / 1.5);
         height: 40rem;
-        background-image: url('../img/Rectangle\ 30.png');
+        background-image: url('../img/home_page/section-1-main.png');
         padding: $p-3;
         position: relative;
         margin-right: $m-2;
@@ -34,7 +34,7 @@
         top: 20rem;
     }
 
-    &__second-element{
+    &-second-element{
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 1rem;
@@ -87,40 +87,37 @@
     margin-top: $m-10;
     margin-bottom: $m-10;
 
-    &__text-block{
+    &-text-block{
         width: calc(100% / 3);
         text-align: center;
         margin: 2rem;
     }
 
     &__text{
-        font-weight: $font-w-400;
-        font-size: $font-14;
-        line-height: 21px;
-        color: $color-white;
+        @include text();
     }
 }
 
 .section-4{
     text-align: center;
 
-    &__blocks{
+    &-blocks{
         @include flex();
         align-items: flex-start;
     }
 
-    &__block{
+    &-block{
         width: calc(100% / 2);
         text-align: center;
         margin: 2rem;
     }
 
-    &__two-blocks {
+    &-two-blocks {
         @include flex();
         justify-content: center;
     }
 
-    &__one-block {
+    &-one-block {
         margin: $m-1;
 
     }
@@ -135,22 +132,22 @@
         margin: $m-2;
     }
 
-    &__media{
+    &-media{
         @include flex();
         justify-content: space-around;
     }
 }
 
-.section-5 {
+.section-contacts {
     margin-top: $m-10;
     text-align: center;
 
-    &__blocks {
+    &-blocks {
         @include flex();
         margin-bottom: $m-7;
     }
 
-    &__block-1 {
+    &-block-1 {
         width: calc(100% / 3);
         text-align: left;
         border: 2px solid $secondary-color;
@@ -160,6 +157,15 @@
         background-color: $secondary-color-1;
         margin-right: $m-2;
         height: 656px;
+    }
+
+    &__text {
+        @include text();
+        margin-top: 2rem;
+
+        &:hover {
+            color: $color-white;
+        }
     }
 }
 
@@ -226,12 +232,12 @@ h3 {
     color: $color-white !important;
 }
 
-.section-1__content {
+.section-content {
     text-align: center;
     margin-top: $m-3;
     margin-bottom: $m-10;
 
-    &-title{
+    &__title{
         font-weight: $font-w-700;
         font-size: $font-24;
         line-height: 36px;
@@ -252,7 +258,7 @@ h3 {
         margin: $m-5;
     }
 
-    &-description {
+    &__description {
         font-weight: $font-w-400;
         font-size: $font-20;
         line-height: 30px;
@@ -261,14 +267,14 @@ h3 {
         margin-top: $m-3;
     }
 
-    &-lists {
+    &__lists {
         list-style-type: square;
         width: 40rem;
         margin: 0 auto;
         margin-top: $m-4;
     }
 
-    &-list {
+    &__list {
         color: $secondary-color;
         font-size: $font-32;
         text-align: left;
@@ -283,7 +289,7 @@ h3 {
     }
 }
 
-.section__gallery {
+.section-gallery {
     text-align: center;
     margin-top: $m-3;
     margin-bottom: $m-10;
@@ -333,24 +339,24 @@ h3 {
             transition: 0.5s;
         }
 
-        &:hover .section__gallery-img {
+        &:hover .section-gallery__img {
             opacity: .8;
             transition: 0.5s;
         }
 
-        &:hover .section__gallery-vector {
+        &:hover .section-gallery__vector {
             opacity: .8;
             transition: 0.5s;
         }
     }
 
-    &-img {
+    &__img {
         position: absolute;
         z-index: 2;
         opacity: 0;
     }
 
-    &-vector {
+    &__vector {
         position: absolute;
         z-index: 3;
         top: 11.4rem;
@@ -359,7 +365,7 @@ h3 {
     }
 }
 
-.section__menu {
+.section-menu {
     text-align: center;
     margin-top: $m-3;
 }
