@@ -1018,7 +1018,7 @@ h3 {
   .footer {
     height: 3rem;
   }
-  .section__gallery-block {
+  .section-gallery-block {
     gap: 1rem;
   }
   .btn-primary {
@@ -1027,6 +1027,11 @@ h3 {
   .btn_news {
     width: -moz-fit-content;
     width: fit-content;
+  }
+  .section-1__poster-container {
+    gap: 1rem;
+    margin-right: 1rem;
+    margin-left: 0;
   }
 }
 @media only screen and (max-width: 480px) {

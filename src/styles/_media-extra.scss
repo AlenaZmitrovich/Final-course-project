@@ -45,7 +45,7 @@
         height: 3rem;
     }
 
-    .section__gallery-block {
+    .section-gallery-block {
         gap: 1rem;
     }
 
@@ -55,5 +55,12 @@
 
     .btn_news {
         width:fit-content;
+       }
+
+       .section-1__poster-container {
+        gap: 1rem;
+        
+        margin-right: $m-1;
+        margin-left: 0;
        }
 }
