@@ -1,700 +1,1081 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home</title>
 
     <!-- Icons -->
-    <link rel="shortcut icon" href="./img/icons/microphone.png" type="image/x-icon">
+    <link
+      rel="shortcut icon"
+      href="./img/icons/microphone.png"
+      type="image/x-icon"
+    />
 
     <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Signika:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Signika:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- Bootstrap -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
 
     <!-- Material UI -->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
 
     <!-- Slider Swiper -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
 
     <!-- Global styles -->
-    <link rel="stylesheet" href="./styles/main.css">
-</head>
-<body>
-
+    <link rel="stylesheet" href="./styles/main.css" />
+  </head>
+  <body>
     <header class="header container">
+      <div class="header-first-element">
+        <img src="./img/icons/logo.png" alt="logo" />
+      </div>
 
-            <div class="header-first-element">
-                <img src="./img/icons/logo.png" alt="logo">
-            </div>
+      <nav class="navbar">
+        <ul class="navbar__lists" id="menulist">
+          <li class="navbar__list"
+            ><a href="#" class="navbar__link">Главная</a></li
+          >
+          <li class="navbar__list"
+            ><a href="./pages/menu.html" class="navbar__link">Меню</a></li
+          >
+          <li class="navbar__list"
+            ><a href="./pages/poster.html" class="navbar__link">Афиша</a></li
+          >
+          <li class="navbar__list"
+            ><a href="./pages/content.html" class="navbar__link"
+              >Сотрудничество</a
+            ></li
+          >
+          <li class="navbar__list"
+            ><a href="./pages/gallery.html" class="navbar__link">Галерея</a></li
+          >
+          <li class="navbar__list"
+            ><a href="./pages/news.html" class="navbar__link">Новости</a></li
+          >
+          <li class="navbar__list"
+            ><a href="#place" class="navbar__link">Контакты</a></li
+          >
+        </ul>
+      </nav>
 
-            <nav class="navbar">
-                <ul class="navbar__lists" id="menulist">
-                    <li class="navbar__list"><a href="#" class="navbar__link">Главная</a></li>
-                    <li class="navbar__list"><a href="./pages/menu.html" class="navbar__link">Меню</a></li>
-                    <li class="navbar__list"><a href="./pages/poster.html" class="navbar__link">Афиша</a></li>
-                    <li class="navbar__list"><a href="./pages/content.html" class="navbar__link">Сотрудничество</a></li>
-                    <li class="navbar__list"><a href="./pages/gallery.html" class="navbar__link">Галерея</a></li>
-                    <li class="navbar__list"><a href="./pages/news.html" class="navbar__link">Новости</a></li>
-                    <li class="navbar__list"><a href="#place" class="navbar__link">Контакты</a></li>
-                </ul>
-            </nav>
+      <a href="#" class="menu-icon btn" onclick="toggleOpenMenu()">Разделы</a>
 
-            <a href="#" class="menu-icon btn" onclick="toggleOpenMenu()">Разделы</a>
-                
-            <div class="header-last-element">
+      <div class="header-last-element">
+        <button
+          type="button"
+          class="btn btn-modal"
+          data-toggle="modal"
+          data-target=".bd-example-modal-lg"
+          >Бронирование</button
+        >
 
-                <button type="button" class="btn btn-modal" data-toggle="modal" data-target=".bd-example-modal-lg">Бронирование</button>
-
-                <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-                    <div class="modal-dialog modal-lg">
-                        <div class="modal-content">
-                            <form class="form">
-                                <div class="mb-3">
-                                  <label for="exampleInputName" class="form-label navbar__link">Укажите ваше имя и фамилию</label>
-                                  <input type="text" class="form-control navbar__link" id="exampleInputName" aria-describedby="nameHelp">
-                                </div>
-                                <div class="mb-3">
-                                  <label for="exampleInputPhone" class="form-label navbar__link">Контактный номер телефона</label>
-                                  <input type="phone" class="form-control navbar__link" id="exampleInputPhone">
-                                </div>
-                                <div class="form-group">
-                                    <label for="exampleFormControlSelect1" class="form-label navbar__link">Количество гостей</label>
-                                    <select class="form-control navbar__link" id="exampleFormControlSelect1">
-                                      <option class="navbar__link">1</option>
-                                      <option class="navbar__link">2</option>
-                                      <option class="navbar__link">3</option>
-                                      <option class="navbar__link">4</option>
-                                      <option class="navbar__link">5</option>
-                                    </select>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="exampleInputName" class="form-label navbar__link">Дата и время брони</label>
-                                    <input type="data" class="form-control navbar__link" id="exampleInputData" aria-describedby="dataHelp">
-                                </div>
-                                
-                                <button type="submit" class="btn btn-primary">Отправить</button>
-                              </form>
-                        </div>
-                    </div>
+        <div
+          class="modal fade bd-example-modal-lg"
+          tabindex="-1"
+          role="dialog"
+          aria-labelledby="myLargeModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+              <form class="form">
+                <div class="mb-3">
+                  <label for="exampleInputName" class="form-label navbar__link"
+                    >Укажите ваше имя и фамилию</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control navbar__link"
+                    id="exampleInputName"
+                    aria-describedby="nameHelp"
+                  />
                 </div>
-            </div>
+                <div class="mb-3">
+                  <label for="exampleInputPhone" class="form-label navbar__link"
+                    >Контактный номер телефона</label
+                  >
+                  <input
+                    type="phone"
+                    class="form-control navbar__link"
+                    id="exampleInputPhone"
+                  />
+                </div>
+                <div class="form-group">
+                  <label
+                    for="exampleFormControlSelect1"
+                    class="form-label navbar__link"
+                    >Количество гостей</label
+                  >
+                  <select
+                    class="form-control navbar__link"
+                    id="exampleFormControlSelect1"
+                  >
+                    <option class="navbar__link">1</option>
+                    <option class="navbar__link">2</option>
+                    <option class="navbar__link">3</option>
+                    <option class="navbar__link">4</option>
+                    <option class="navbar__link">5</option>
+                  </select>
+                </div>
+                <div class="mb-3">
+                  <label for="exampleInputName" class="form-label navbar__link"
+                    >Дата и время брони</label
+                  >
+                  <input
+                    type="data"
+                    class="form-control navbar__link"
+                    id="exampleInputData"
+                    aria-describedby="dataHelp"
+                  />
+                </div>
 
+                <button type="submit" class="btn btn-primary">Отправить</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
     </header>
 
     <main class="main">
-        <section class="container section section-1">
+      <section class="container section section-1">
+        <div class="section-1-first-element">
+          <a class="section-1__subscription">SINCE 1996</a>
 
-            <div class="section-1-first-element">
+          <h1 class="section-1__title">TRUE. FONTANKA. <br />UNDERGROUND.</h1>
+        </div>
 
-                <a class="section-1__subscription">SINCE 1996</a>
+        <div class="section-1-second-element">
+          <div class="grid-item item1"
+            ><a href="#" class="section-1__sub">Ближайшие</a></div
+          >
+          <div class="grid-item item2"
+            ><a
+              href="./pages/poster.html"
+              class="section-1__sub section-1__sub_hiden"
+              >Скоро</a
+            ></div
+          >
+          <div class="grid-item item3"
+            ><img src="./img/home_page/section-1-1.png" alt="poster"
+          /></div>
+          <div class="grid-item item4"
+            ><img src="./img/home_page/section-1-2.png" alt="poster"
+          /></div>
+          <div class="grid-item item5"
+            ><img src="./img/home_page/section-1-3.png" alt="poster"
+          /></div>
+          <div class="grid-item item6"
+            ><img src="./img/home_page/section-1-4.png" alt="poster"
+          /></div>
+        </div>
+      </section>
 
-                <h1 class="section-1__title">TRUE. FONTANKA. <br>UNDERGROUND.</h1>
+      <section class="container section section-2">
+        <a href="#" class="btn-1">TOP "MANHATTAN" MENU</a>
 
-            </div>
+        <h2 class="title">КУХНЯ</h2>
 
-            <div class="section-1-second-element">
-                <div class="grid-item item1"><a href="#" class="section-1__sub">Ближайшие</a></div>
-                <div class="grid-item item2"><a href="./pages/poster.html" class="section-1__sub section-1__sub_hiden">Скоро</a></div>
-                <div class="grid-item item3"><img src="./img/home_page/section-1-1.png" alt="poster"></div>
-                <div class="grid-item item4"><img src="./img/home_page/section-1-2.png" alt="poster"></div>
-                <div class="grid-item item5"><img src="./img/home_page/section-1-3.png" alt="poster"></div>
-                <div class="grid-item item6"><img src="./img/home_page/section-1-4.png" alt="poster"></div>
-            </div>
-
-        </section>
-
-        <section class="container section section-2">
-            <a href="#" class="btn-1">TOP "MANHATTAN" MENU</a>
-
-            <h2 class="title">КУХНЯ</h2>
-
-            <div class="swiper">
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide">
-                    <div class="product">
-                        <div class="products products-1">
-
-                            <div class="products-item">
-                                <div class="products-photo">
-                                    <img src="./img/home_page/section-2-1.png" alt="menu_img">
-                                </div>
-                                <div class="products-right">
-                                    <div class="products-top">
-                                        <div class="products-title">
-                                            <h3 class="products__name">AMET DONEC.</h3>
-                                        </div>
-                                        <a class="products__price btn">550 ₽</a>
-                                    </div>
-                                    <div class="products-bottom">
-                                        <p class="products__weight">200 гр</p>
-                                        <p class="products__description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione animi nulla, minus omnis culpa ipsa tempore!</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="products-item">
-                                <div class="products-photo">
-                                    <img src="./img/home_page/section-2-2.png" alt="menu_img">
-                                </div>
-                                <div class="products-right">
-                                    <div class="products-top">
-                                        <div class="products-title">
-                                            <h3 class="products__name">AMET DONEC.</h3>
-                                        </div>
-                                        <a class="products__price btn">550 ₽</a>
-                                    </div>
-                                    <div class="products-bottom">
-                                        <p class="products__weight">400 гр</p>
-                                        <p class="products__description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione animi nulla, minus omnis culpa ipsa tempore!</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="products-item">
-                                <div class="products-photo">
-                                    <img src="./img/home_page/section-2-3.png" alt="menu_img">
-                                </div>
-                                <div class="products-right">
-                                    <div class="products-top">
-                                        <div class="products-title">
-                                            <h3 class="products__name">AMET DONEC.</h3>
-                                        </div>
-                                        <a class="products__price btn">550 ₽</a>
-                                    </div>
-                                    <div class="products-bottom">
-                                        <p class="products__weight">300 гр</p>
-                                        <p class="products__description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione animi nulla, minus omnis culpa ipsa tempore!</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="products-item">
-                                <div class="products-photo">
-                                    <img src="./img/home_page/section-2-4.png" alt="menu_img">
-                                </div>
-                                <div class="products-right">
-                                    <div class="products-top">
-                                        <div class="products-title">
-                                            <h3 class="products__name">AMET DONEC.</h3>
-                                        </div>
-                                        <a class="products__price btn">550 ₽</a>
-                                    </div>
-                                    <div class="products-bottom">
-                                        <p class="products__weight">100 гр</p>
-                                        <p class="products__description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione animi nulla, minus omnis culpa ipsa tempore!</p>
-                                    </div>
-                                </div>
-                            </div>
-
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="product">
+                <div class="products products-1">
+                  <div class="products-item">
+                    <div class="products-photo">
+                      <img
+                        src="./img/home_page/section-2-1.png"
+                        alt="menu_img"
+                      />
+                    </div>
+                    <div class="products-right">
+                      <div class="products-top">
+                        <div class="products-title">
+                          <h3 class="products__name">AMET DONEC.</h3>
                         </div>
-
-                        <div class="products products-2">
-                            
-                            <div class="products-item">
-                                <div class="products-photo">
-                                    <img src="./img/home_page/section-2-5.png" alt="menu_img">
-                                </div>
-                                <div class="products-right">
-                                    <div class="products-top">
-                                        <div class="products-title">
-                                            <h3 class="products__name">AMET DONEC.</h3>
-                                        </div>
-                                        <a class="products__price btn">550 ₽</a>
-                                    </div>
-                                    <div class="products-bottom">
-                                        <p class="products__weight">500 гр</p>
-                                        <p class="products__description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione animi nulla, minus omnis culpa ipsa tempore!</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="products-item">
-                                <div class="products-photo">
-                                    <img src="./img/home_page/section-2-6.png" alt="menu_img">
-                                </div>
-                                <div class="products-right">
-                                    <div class="products-top">
-                                        <div class="products-title">
-                                            <h3 class="products__name">AMET DONEC.</h3>
-                                        </div>
-                                        <a class="products__price btn">550 ₽</a>
-                                    </div>
-                                    <div class="products-bottom">
-                                        <p class="products__weight">200 гр</p>
-                                        <p class="products__description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione animi nulla, minus omnis culpa ipsa tempore!</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="products-item">
-                                <div class="products-photo">
-                                    <img src="./img/home_page/section-2-7.png" alt="menu_img">
-                                </div>
-                                <div class="products-right">
-                                    <div class="products-top">
-                                        <div class="products-title">
-                                            <h3 class="products__name">AMET DONEC.</h3>
-                                        </div>
-                                        <a class="products__price btn">550 ₽</a>
-                                    </div>
-                                    <div class="products-bottom">
-                                        <p class="products__weight">500 гр</p>
-                                        <p class="products__description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione animi nulla, minus omnis culpa ipsa tempore!</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="products-item">
-                                <div class="products-photo">
-                                    <img src="./img/home_page/section-2-8.png" alt="menu_img">
-                                </div>
-                                <div class="products-right">
-                                    <div class="products-top">
-                                        <div class="products-title">
-                                            <h3 class="products__name">AMET DONEC.</h3>
-                                        </div>
-                                        <a class="products__price btn">550 ₽</a>
-                                    </div>
-                                    <div class="products-bottom">
-                                        <p class="products__weight">300 гр</p>
-                                        <p class="products__description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione animi nulla, minus omnis culpa ipsa tempore!</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
+                        <a class="products__price btn">550 ₽</a>
+                      </div>
+                      <div class="products-bottom">
+                        <p class="products__weight">200 гр</p>
+                        <p class="products__description"
+                          >Lorem ipsum, dolor sit amet consectetur adipisicing
+                          elit. Ratione animi nulla, minus omnis culpa ipsa
+                          tempore!</p
+                        >
+                      </div>
                     </div>
                   </div>
 
-                  <div class="swiper-slide">
-                    <div class="product">
-                        <div class="products products-1">
-
-                            <div class="products-item">
-                                <div class="products-photo">
-                                    <img src="./img/home_page/section-2-1.png" alt="menu_img">
-                                </div>
-                                <div class="products-right">
-                                    <div class="products-top">
-                                        <div class="products-title">
-                                            <h3 class="products__name">AMET DONEC.</h3>
-                                        </div>
-                                        <a class="products__price btn">550 ₽</a>
-                                    </div>
-                                    <div class="products-bottom">
-                                        <p class="products__weight">200 гр</p>
-                                        <p class="products__description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione animi nulla, minus omnis culpa ipsa tempore!</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="products-item">
-                                <div class="products-photo">
-                                    <img src="./img/home_page/section-2-2.png" alt="menu_img">
-                                </div>
-                                <div class="products-right">
-                                    <div class="products-top">
-                                        <div class="products-title">
-                                            <h3 class="products__name">AMET DONEC.</h3>
-                                        </div>
-                                        <a class="products__price btn">550 ₽</a>
-                                    </div>
-                                    <div class="products-bottom">
-                                        <p class="products__weight">400 гр</p>
-                                        <p class="products__description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione animi nulla, minus omnis culpa ipsa tempore!</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="products-item">
-                                <div class="products-photo">
-                                    <img src="./img/home_page/section-2-3.png" alt="menu_img">
-                                </div>
-                                <div class="products-right">
-                                    <div class="products-top">
-                                        <div class="products-title">
-                                            <h3 class="products__name">AMET DONEC.</h3>
-                                        </div>
-                                        <a class="products__price btn">550 ₽</a>
-                                    </div>
-                                    <div class="products-bottom">
-                                        <p class="products__weight">300 гр</p>
-                                        <p class="products__description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione animi nulla, minus omnis culpa ipsa tempore!</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="products-item">
-                                <div class="products-photo">
-                                    <img src="./img/home_page/section-2-4.png" alt="menu_img">
-                                </div>
-                                <div class="products-right">
-                                    <div class="products-top">
-                                        <div class="products-title">
-                                            <h3 class="products__name">AMET DONEC.</h3>
-                                        </div>
-                                        <a class="products__price btn">550 ₽</a>
-                                    </div>
-                                    <div class="products-bottom">
-                                        <p class="products__weight">100 гр</p>
-                                        <p class="products__description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione animi nulla, minus omnis culpa ipsa tempore!</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-
-                        <div class="products products-2">
-                            
-                            <div class="products-item">
-                                <div class="products-photo">
-                                    <img src="./img/home_page/section-2-5.png" alt="menu_img">
-                                </div>
-                                <div class="products-right">
-                                    <div class="products-top">
-                                        <div class="products-title">
-                                            <h3 class="products__name">AMET DONEC.</h3>
-                                        </div>
-                                        <a class="products__price btn">550 ₽</a>
-                                    </div>
-                                    <div class="products-bottom">
-                                        <p class="products__weight">500 гр</p>
-                                        <p class="products__description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione animi nulla, minus omnis culpa ipsa tempore!</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="products-item">
-                                <div class="products-photo">
-                                    <img src="./img/home_page/section-2-6.png" alt="menu_img">
-                                </div>
-                                <div class="products-right">
-                                    <div class="products-top">
-                                        <div class="products-title">
-                                            <h3 class="products__name">AMET DONEC.</h3>
-                                        </div>
-                                        <a class="products__price btn">550 ₽</a>
-                                    </div>
-                                    <div class="products-bottom">
-                                        <p class="products__weight">200 гр</p>
-                                        <p class="products__description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione animi nulla, minus omnis culpa ipsa tempore!</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="products-item">
-                                <div class="products-photo">
-                                    <img src="./img/home_page/section-2-7.png" alt="menu_img">
-                                </div>
-                                <div class="products-right">
-                                    <div class="products-top">
-                                        <div class="products-title">
-                                            <h3 class="products__name">AMET DONEC.</h3>
-                                        </div>
-                                        <a class="products__price btn">550 ₽</a>
-                                    </div>
-                                    <div class="products-bottom">
-                                        <p class="products__weight">500 гр</p>
-                                        <p class="products__description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione animi nulla, minus omnis culpa ipsa tempore!</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="products-item">
-                                <div class="products-photo">
-                                    <img src="./img/home_page/section-2-8.png" alt="menu_img">
-                                </div>
-                                <div class="products-right">
-                                    <div class="products-top">
-                                        <div class="products-title">
-                                            <h3 class="products__name">AMET DONEC.</h3>
-                                        </div>
-                                        <a class="products__price btn">550 ₽</a>
-                                    </div>
-                                    <div class="products-bottom">
-                                        <p class="products__weight">300 гр</p>
-                                        <p class="products__description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione animi nulla, minus omnis culpa ipsa tempore!</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
+                  <div class="products-item">
+                    <div class="products-photo">
+                      <img
+                        src="./img/home_page/section-2-2.png"
+                        alt="menu_img"
+                      />
                     </div>
+                    <div class="products-right">
+                      <div class="products-top">
+                        <div class="products-title">
+                          <h3 class="products__name">AMET DONEC.</h3>
+                        </div>
+                        <a class="products__price btn">550 ₽</a>
+                      </div>
+                      <div class="products-bottom">
+                        <p class="products__weight">400 гр</p>
+                        <p class="products__description"
+                          >Lorem ipsum, dolor sit amet consectetur adipisicing
+                          elit. Ratione animi nulla, minus omnis culpa ipsa
+                          tempore!</p
+                        >
+                      </div>
+                    </div>
+                  </div>
 
+                  <div class="products-item">
+                    <div class="products-photo">
+                      <img
+                        src="./img/home_page/section-2-3.png"
+                        alt="menu_img"
+                      />
+                    </div>
+                    <div class="products-right">
+                      <div class="products-top">
+                        <div class="products-title">
+                          <h3 class="products__name">AMET DONEC.</h3>
+                        </div>
+                        <a class="products__price btn">550 ₽</a>
+                      </div>
+                      <div class="products-bottom">
+                        <p class="products__weight">300 гр</p>
+                        <p class="products__description"
+                          >Lorem ipsum, dolor sit amet consectetur adipisicing
+                          elit. Ratione animi nulla, minus omnis culpa ipsa
+                          tempore!</p
+                        >
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="products-item">
+                    <div class="products-photo">
+                      <img
+                        src="./img/home_page/section-2-4.png"
+                        alt="menu_img"
+                      />
+                    </div>
+                    <div class="products-right">
+                      <div class="products-top">
+                        <div class="products-title">
+                          <h3 class="products__name">AMET DONEC.</h3>
+                        </div>
+                        <a class="products__price btn">550 ₽</a>
+                      </div>
+                      <div class="products-bottom">
+                        <p class="products__weight">100 гр</p>
+                        <p class="products__description"
+                          >Lorem ipsum, dolor sit amet consectetur adipisicing
+                          elit. Ratione animi nulla, minus omnis culpa ipsa
+                          tempore!</p
+                        >
+                      </div>
+                    </div>
                   </div>
                 </div>
-            
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
-            </div>
 
-            <a href="./pages/menu.html" class="btn-2">ВСЕ МЕНЮ</a>
-
-        </section>
-
-        <section class="container section section-3">
-            <div class="section-3-text-block">
-                <a href="./pages/content.html" class="btn-1">TOP "MANHATTAN" EVENTS</a>
-
-                <h2 class="title">БАНКЕТЫ</h2>
-
-                <p class="section-3__text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero debitis nam commodi itaque atque rerum reiciendis dolorem adipisci eum ut doloremque, ullam et vel voluptas. Velit rerum, quas tenetur odit officiis labore quisquam dolores.</p> <br>
-
-                <p class="section-3__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe repudiandae fugiat reprehenderit ducimus rem, impedit vel vitae, sit consectetur iure, earum totam! Voluptatem totam corrupti voluptatibus nam, repudiandae iste quae fuga atque cupiditate rem distinctio adipisci itaque possimus!</p> <br>
-
-                <p class="section-3__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet fugit vel doloribus exercitationem deleniti labore eum voluptatem quos.</p> <br> <br>
-
-                <a href="./pages/content.html" class="btn">Подробнее</a>
-            </div>
-
-            <div class="section-3-text-block section-3-image">
-                <img src="./img/home_page/section-3.png" alt="image" class="section-3__img">
-            </div>
-
-            <div class="section-3-text-block">
-                <a href="#" class="btn-1">TOP "MANHATTAN" TOURISTS</a>
-
-                <h2 class="title">ТУРИСТЫ</h2>
-
-                <p class="section-3__text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero debitis nam commodi itaque atque rerum reiciendis dolorem adipisci eum ut doloremque, ullam et vel voluptas. Velit rerum, quas tenetur odit officiis labore quisquam dolores.</p> <br>
-
-                <p class="section-3__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe repudiandae fugiat reprehenderit ducimus rem, impedit vel vitae, sit consectetur iure, earum totam! Voluptatem totam corrupti voluptatibus nam, repudiandae iste quae fuga atque cupiditate rem distinctio adipisci itaque possimus!</p> <br>
-
-                <p class="section-3__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet fugit vel doloribus exercitationem deleniti labore eum voluptatem quos.</p> <br> <br>
-
-                <a href="#" class="btn">Подробнее</a>
-            </div>
-
-        </section>
-
-        <section class="container section section-4">
-
-            <a href="./pages/poster.html" class="btn-1">TOP "MANHATTAN" PARTY</a>
-
-            <h2 class="title">ТЕХРАЙДЕР</h2>
-
-            <div class="section-4-blocks">
-
-                <div class="section-4-block">
-
-                <div class="accordion" id="accordionExample">
-                    <div class="card">
-                      <div class="card-header" id="headingOne">
-                        <h5 class="mb-0">
-                          <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                            Loudspeakers
-                          </button>
-                        </h5>
-                      </div>
-                  
-                      <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
-                        <div class="card-body">
-                          <ul>
-                            <li class="card-body__list">Acoustic system BELL Top 600W x 2</li>
-                            <li class="card-body__list">Acoustic system BELL Mid 600W x 2</li>
-                            <li class="card-body__list">Acoustic system BELL Sub 1000W x 2</li>
-                            <li class="card-body__list">Front monitor Yamaha SM12V 300w x 2</li>
-                            <li class="card-body__list">Backside monitor Dynacord 500W x 2</li>
-                          </ul>
+                <div class="products products-2">
+                  <div class="products-item">
+                    <div class="products-photo">
+                      <img
+                        src="./img/home_page/section-2-5.png"
+                        alt="menu_img"
+                      />
+                    </div>
+                    <div class="products-right">
+                      <div class="products-top">
+                        <div class="products-title">
+                          <h3 class="products__name">AMET DONEC.</h3>
                         </div>
+                        <a class="products__price btn">550 ₽</a>
+                      </div>
+                      <div class="products-bottom">
+                        <p class="products__weight">500 гр</p>
+                        <p class="products__description"
+                          >Lorem ipsum, dolor sit amet consectetur adipisicing
+                          elit. Ratione animi nulla, minus omnis culpa ipsa
+                          tempore!</p
+                        >
                       </div>
                     </div>
+                  </div>
 
-                    <div class="card">
-                        <div class="card-header" id="headingTwo">
-                          <h5 class="mb-0">
-                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                Amplifier
-                            </button>
-                          </h5>
-                        </div>
-                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-                          <div class="card-body">
-                            <ul>
-                                <li class="card-body__list">Acoustic system BELL Top 600W x 2</li>
-                                <li class="card-body__list">Acoustic system BELL Mid 600W x 2</li>
-                                <li class="card-body__list">Acoustic system BELL Sub 1000W x 2</li>
-                                <li class="card-body__list">Front monitor Yamaha SM12V 300w x 2</li>
-                                <li class="card-body__list">Backside monitor Dynacord 500W x 2</li>
-                              </ul>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="card">
-                        <div class="card-header" id="headingThree">
-                          <h5 class="mb-0">
-                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                FOH
-                            </button>
-                          </h5>
-                        </div>
-                        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-                          <div class="card-body">
-                            <ul>
-                                <li class="card-body__list">Acoustic system BELL Top 600W x 2</li>
-                                <li class="card-body__list">Acoustic system BELL Mid 600W x 2</li>
-                                <li class="card-body__list">Acoustic system BELL Sub 1000W x 2</li>
-                                <li class="card-body__list">Front monitor Yamaha SM12V 300w x 2</li>
-                                <li class="card-body__list">Backside monitor Dynacord 500W x 2</li>
-                              </ul>
-                          </div>
-                        </div>
-                      </div>
-
-                      <div class="card">
-                        <div class="card-header" id="headingFour">
-                          <h5 class="mb-0">
-                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                                Backline
-                            </button>
-                          </h5>
-                        </div>
-                        <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
-                          <div class="card-body">
-                            <ul>
-                                <li class="card-body__list">Acoustic system BELL Top 600W x 2</li>
-                                <li class="card-body__list">Acoustic system BELL Mid 600W x 2</li>
-                                <li class="card-body__list">Acoustic system BELL Sub 1000W x 2</li>
-                                <li class="card-body__list">Front monitor Yamaha SM12V 300w x 2</li>
-                                <li class="card-body__list">Backside monitor Dynacord 500W x 2</li>
-                              </ul>
-                          </div>
-                        </div>
-                      </div>
-
-                      <div class="card">
-                        <div class="card-header" id="headingFive">
-                          <h5 class="mb-0">
-                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                                Microphone set
-                            </button>
-                          </h5>
-                        </div>
-                        <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
-                          <div class="card-body">
-                            <ul>
-                                <li class="card-body__list">Acoustic system BELL Top 600W x 2</li>
-                                <li class="card-body__list">Acoustic system BELL Mid 600W x 2</li>
-                                <li class="card-body__list">Acoustic system BELL Sub 1000W x 2</li>
-                                <li class="card-body__list">Front monitor Yamaha SM12V 300w x 2</li>
-                                <li class="card-body__list">Backside monitor Dynacord 500W x 2</li>
-                              </ul>
-                          </div>
-                        </div>
-                      </div>
-
-                      <div class="card">
-                        <div class="card-header" id="headingSix">
-                          <h5 class="mb-0">
-                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-                                DJ equipment
-                            </button>
-                          </h5>
-                        </div>
-                        <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordionExample">
-                          <div class="card-body">
-                            <ul>
-                                <li class="card-body__list">Acoustic system BELL Top 600W x 2</li>
-                                <li class="card-body__list">Acoustic system BELL Mid 600W x 2</li>
-                                <li class="card-body__list">Acoustic system BELL Sub 1000W x 2</li>
-                                <li class="card-body__list">Front monitor Yamaha SM12V 300w x 2</li>
-                                <li class="card-body__list">Backside monitor Dynacord 500W x 2</li>
-                              </ul>
-                          </div>
-                        </div>
-                      </div>
-
-                </div>
-
-                </div>
-
-                <div class="section-4-block">
-
-                    <h3 class="title_s-4">ЗВУКОРЕЖИССЕРЫ <br> КЛУБА МАНХЭТТЕН</h3>
-
-                    <div class="section-4-two-blocks">
-                        <div class="section-4-one-block">
-                            <img src="./img/home_page/section-4-isotov.png" alt="isotov">
-                            <p class="section-4__names">ИЗОТОВ <br> КОНСТАНТИН</p>
-                            <div class="section-4-media">
-                                <a href="#" class="btn"><img src="./img/icons/vk.svg" alt="vk"></a>
-                                <a href="#" class="btn"><img src="./img/icons/telegram.svg" alt="telegram"></a>
-                            </div>
-                        </div>
-
-                        <div class="section-4-one-block">
-                            <img src="./img/home_page/section-4-joziev.png" alt="joziev">
-                            <p class="section-4__names">ДАВИД <br> ХОЗИЕВ</p>
-                            <div class="section-4-media">
-                                <a href="#" class="btn"><img src="./img/icons/vk.svg" alt="vk"></a>
-                                <a href="#" class="btn"><img src="./img/icons/telegram.svg" alt="telegram"></a>
-                            </div>
-                        </div>
+                  <div class="products-item">
+                    <div class="products-photo">
+                      <img
+                        src="./img/home_page/section-2-6.png"
+                        alt="menu_img"
+                      />
                     </div>
+                    <div class="products-right">
+                      <div class="products-top">
+                        <div class="products-title">
+                          <h3 class="products__name">AMET DONEC.</h3>
+                        </div>
+                        <a class="products__price btn">550 ₽</a>
+                      </div>
+                      <div class="products-bottom">
+                        <p class="products__weight">200 гр</p>
+                        <p class="products__description"
+                          >Lorem ipsum, dolor sit amet consectetur adipisicing
+                          elit. Ratione animi nulla, minus omnis culpa ipsa
+                          tempore!</p
+                        >
+                      </div>
+                    </div>
+                  </div>
 
+                  <div class="products-item">
+                    <div class="products-photo">
+                      <img
+                        src="./img/home_page/section-2-7.png"
+                        alt="menu_img"
+                      />
+                    </div>
+                    <div class="products-right">
+                      <div class="products-top">
+                        <div class="products-title">
+                          <h3 class="products__name">AMET DONEC.</h3>
+                        </div>
+                        <a class="products__price btn">550 ₽</a>
+                      </div>
+                      <div class="products-bottom">
+                        <p class="products__weight">500 гр</p>
+                        <p class="products__description"
+                          >Lorem ipsum, dolor sit amet consectetur adipisicing
+                          elit. Ratione animi nulla, minus omnis culpa ipsa
+                          tempore!</p
+                        >
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="products-item">
+                    <div class="products-photo">
+                      <img
+                        src="./img/home_page/section-2-8.png"
+                        alt="menu_img"
+                      />
+                    </div>
+                    <div class="products-right">
+                      <div class="products-top">
+                        <div class="products-title">
+                          <h3 class="products__name">AMET DONEC.</h3>
+                        </div>
+                        <a class="products__price btn">550 ₽</a>
+                      </div>
+                      <div class="products-bottom">
+                        <p class="products__weight">300 гр</p>
+                        <p class="products__description"
+                          >Lorem ipsum, dolor sit amet consectetur adipisicing
+                          elit. Ratione animi nulla, minus omnis culpa ipsa
+                          tempore!</p
+                        >
+                      </div>
+                    </div>
+                  </div>
                 </div>
-
+              </div>
             </div>
 
-        </section>
+            <div class="swiper-slide">
+              <div class="product">
+                <div class="products products-1">
+                  <div class="products-item">
+                    <div class="products-photo">
+                      <img
+                        src="./img/home_page/section-2-1.png"
+                        alt="menu_img"
+                      />
+                    </div>
+                    <div class="products-right">
+                      <div class="products-top">
+                        <div class="products-title">
+                          <h3 class="products__name">AMET DONEC.</h3>
+                        </div>
+                        <a class="products__price btn">550 ₽</a>
+                      </div>
+                      <div class="products-bottom">
+                        <p class="products__weight">200 гр</p>
+                        <p class="products__description"
+                          >Lorem ipsum, dolor sit amet consectetur adipisicing
+                          elit. Ratione animi nulla, minus omnis culpa ipsa
+                          tempore!</p
+                        >
+                      </div>
+                    </div>
+                  </div>
 
-        <section class="container section section-contacts">
+                  <div class="products-item">
+                    <div class="products-photo">
+                      <img
+                        src="./img/home_page/section-2-2.png"
+                        alt="menu_img"
+                      />
+                    </div>
+                    <div class="products-right">
+                      <div class="products-top">
+                        <div class="products-title">
+                          <h3 class="products__name">AMET DONEC.</h3>
+                        </div>
+                        <a class="products__price btn">550 ₽</a>
+                      </div>
+                      <div class="products-bottom">
+                        <p class="products__weight">400 гр</p>
+                        <p class="products__description"
+                          >Lorem ipsum, dolor sit amet consectetur adipisicing
+                          elit. Ratione animi nulla, minus omnis culpa ipsa
+                          tempore!</p
+                        >
+                      </div>
+                    </div>
+                  </div>
 
-            <a href="#" class="btn-1" name="place">TOP "MANHATTAN" PLACE</a>
+                  <div class="products-item">
+                    <div class="products-photo">
+                      <img
+                        src="./img/home_page/section-2-3.png"
+                        alt="menu_img"
+                      />
+                    </div>
+                    <div class="products-right">
+                      <div class="products-top">
+                        <div class="products-title">
+                          <h3 class="products__name">AMET DONEC.</h3>
+                        </div>
+                        <a class="products__price btn">550 ₽</a>
+                      </div>
+                      <div class="products-bottom">
+                        <p class="products__weight">300 гр</p>
+                        <p class="products__description"
+                          >Lorem ipsum, dolor sit amet consectetur adipisicing
+                          elit. Ratione animi nulla, minus omnis culpa ipsa
+                          tempore!</p
+                        >
+                      </div>
+                    </div>
+                  </div>
 
-            <h2 class="title">КОНТАКТЫ</h2>
-
-            <div class="section-contacts-blocks">
-                <div class="section-contacts-block-1">
-                    <h3 class="btn-link section-contacts__text">Адрес</h3>
-                    <p class="section-contacts__text">Набережная реки Фонтанки, 90 (вход в арке с белыми колоннами)</p>
-                    <h3 class="btn-link section-contacts__text">телефон</h3>
-                    <p class="section-contacts__text">+7 (812) 713-1945</p>
-                    <h3 class="btn-link section-contacts__text">режим работы</h3>
-                    <p class="section-contacts__text">Ежедневно с 12:00 до 06:00</p>
-                    <br>
-                    <br>
-                    <hr>
-                    <br>
-                    <h3 class="btn-link section-contacts__text">директор</h3>
-                    <p class="section-contacts__text">Лидия Эмильевна, +7(921) 963-55-50</p>
-                    <h3 class="btn-link section-contacts__text">арт-директор</h3>
-                    <p class="section-contacts__text">Илиния Ионашко, +7(981) 989-43-30</p>
-
+                  <div class="products-item">
+                    <div class="products-photo">
+                      <img
+                        src="./img/home_page/section-2-4.png"
+                        alt="menu_img"
+                      />
+                    </div>
+                    <div class="products-right">
+                      <div class="products-top">
+                        <div class="products-title">
+                          <h3 class="products__name">AMET DONEC.</h3>
+                        </div>
+                        <a class="products__price btn">550 ₽</a>
+                      </div>
+                      <div class="products-bottom">
+                        <p class="products__weight">100 гр</p>
+                        <p class="products__description"
+                          >Lorem ipsum, dolor sit amet consectetur adipisicing
+                          elit. Ratione animi nulla, minus omnis culpa ipsa
+                          tempore!</p
+                        >
+                      </div>
+                    </div>
+                  </div>
                 </div>
 
-                <div class="section-contacts-block-2">
-                    <img src="./img/map.png" alt="map" class="section-contacts__image">
+                <div class="products products-2">
+                  <div class="products-item">
+                    <div class="products-photo">
+                      <img
+                        src="./img/home_page/section-2-5.png"
+                        alt="menu_img"
+                      />
+                    </div>
+                    <div class="products-right">
+                      <div class="products-top">
+                        <div class="products-title">
+                          <h3 class="products__name">AMET DONEC.</h3>
+                        </div>
+                        <a class="products__price btn">550 ₽</a>
+                      </div>
+                      <div class="products-bottom">
+                        <p class="products__weight">500 гр</p>
+                        <p class="products__description"
+                          >Lorem ipsum, dolor sit amet consectetur adipisicing
+                          elit. Ratione animi nulla, minus omnis culpa ipsa
+                          tempore!</p
+                        >
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="products-item">
+                    <div class="products-photo">
+                      <img
+                        src="./img/home_page/section-2-6.png"
+                        alt="menu_img"
+                      />
+                    </div>
+                    <div class="products-right">
+                      <div class="products-top">
+                        <div class="products-title">
+                          <h3 class="products__name">AMET DONEC.</h3>
+                        </div>
+                        <a class="products__price btn">550 ₽</a>
+                      </div>
+                      <div class="products-bottom">
+                        <p class="products__weight">200 гр</p>
+                        <p class="products__description"
+                          >Lorem ipsum, dolor sit amet consectetur adipisicing
+                          elit. Ratione animi nulla, minus omnis culpa ipsa
+                          tempore!</p
+                        >
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="products-item">
+                    <div class="products-photo">
+                      <img
+                        src="./img/home_page/section-2-7.png"
+                        alt="menu_img"
+                      />
+                    </div>
+                    <div class="products-right">
+                      <div class="products-top">
+                        <div class="products-title">
+                          <h3 class="products__name">AMET DONEC.</h3>
+                        </div>
+                        <a class="products__price btn">550 ₽</a>
+                      </div>
+                      <div class="products-bottom">
+                        <p class="products__weight">500 гр</p>
+                        <p class="products__description"
+                          >Lorem ipsum, dolor sit amet consectetur adipisicing
+                          elit. Ratione animi nulla, minus omnis culpa ipsa
+                          tempore!</p
+                        >
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="products-item">
+                    <div class="products-photo">
+                      <img
+                        src="./img/home_page/section-2-8.png"
+                        alt="menu_img"
+                      />
+                    </div>
+                    <div class="products-right">
+                      <div class="products-top">
+                        <div class="products-title">
+                          <h3 class="products__name">AMET DONEC.</h3>
+                        </div>
+                        <a class="products__price btn">550 ₽</a>
+                      </div>
+                      <div class="products-bottom">
+                        <p class="products__weight">300 гр</p>
+                        <p class="products__description"
+                          >Lorem ipsum, dolor sit amet consectetur adipisicing
+                          elit. Ratione animi nulla, minus omnis culpa ipsa
+                          tempore!</p
+                        >
+                      </div>
+                    </div>
+                  </div>
                 </div>
+              </div>
             </div>
+          </div>
 
-            <hr>
-            
-        </section>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
 
+        <a href="./pages/menu.html" class="btn-2">ВСЕ МЕНЮ</a>
+      </section>
+
+      <section class="container section section-3">
+        <div class="section-3-text-block">
+          <a href="./pages/content.html" class="btn-1"
+            >TOP "MANHATTAN" EVENTS</a
+          >
+
+          <h2 class="title">БАНКЕТЫ</h2>
+
+          <p class="section-3__text"
+            >Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero
+            debitis nam commodi itaque atque rerum reiciendis dolorem adipisci
+            eum ut doloremque, ullam et vel voluptas. Velit rerum, quas tenetur
+            odit officiis labore quisquam dolores.</p
+          >
+          <br />
+
+          <p class="section-3__text"
+            >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe
+            repudiandae fugiat reprehenderit ducimus rem, impedit vel vitae, sit
+            consectetur iure, earum totam! Voluptatem totam corrupti
+            voluptatibus nam, repudiandae iste quae fuga atque cupiditate rem
+            distinctio adipisci itaque possimus!</p
+          >
+          <br />
+
+          <p class="section-3__text"
+            >Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet fugit
+            vel doloribus exercitationem deleniti labore eum voluptatem quos.</p
+          >
+          <br />
+          <br />
+
+          <a href="./pages/content.html" class="btn">Подробнее</a>
+        </div>
+
+        <div class="section-3-text-block section-3-image">
+          <img
+            src="./img/home_page/section-3.png"
+            alt="image"
+            class="section-3__img"
+          />
+        </div>
+
+        <div class="section-3-text-block">
+          <a href="#" class="btn-1">TOP "MANHATTAN" TOURISTS</a>
+
+          <h2 class="title">ТУРИСТЫ</h2>
+
+          <p class="section-3__text"
+            >Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero
+            debitis nam commodi itaque atque rerum reiciendis dolorem adipisci
+            eum ut doloremque, ullam et vel voluptas. Velit rerum, quas tenetur
+            odit officiis labore quisquam dolores.</p
+          >
+          <br />
+
+          <p class="section-3__text"
+            >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe
+            repudiandae fugiat reprehenderit ducimus rem, impedit vel vitae, sit
+            consectetur iure, earum totam! Voluptatem totam corrupti
+            voluptatibus nam, repudiandae iste quae fuga atque cupiditate rem
+            distinctio adipisci itaque possimus!</p
+          >
+          <br />
+
+          <p class="section-3__text"
+            >Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet fugit
+            vel doloribus exercitationem deleniti labore eum voluptatem quos.</p
+          >
+          <br />
+          <br />
+
+          <a href="#" class="btn">Подробнее</a>
+        </div>
+      </section>
+
+      <section class="container section section-4">
+        <a href="./pages/poster.html" class="btn-1">TOP "MANHATTAN" PARTY</a>
+
+        <h2 class="title">ТЕХРАЙДЕР</h2>
+
+        <div class="section-4-blocks">
+          <div class="section-4-block">
+            <div class="accordion" id="accordionExample">
+              <div class="card">
+                <div class="card-header" id="headingOne">
+                  <h5 class="mb-0">
+                    <button
+                      class="btn btn-link"
+                      type="button"
+                      data-toggle="collapse"
+                      data-target="#collapseOne"
+                      aria-expanded="true"
+                      aria-controls="collapseOne"
+                    >
+                      Loudspeakers
+                    </button>
+                  </h5>
+                </div>
+
+                <div
+                  id="collapseOne"
+                  class="collapse show"
+                  aria-labelledby="headingOne"
+                  data-parent="#accordionExample"
+                >
+                  <div class="card-body">
+                    <ul>
+                      <li class="card-body__list"
+                        >Acoustic system BELL Top 600W x 2</li
+                      >
+                      <li class="card-body__list"
+                        >Acoustic system BELL Mid 600W x 2</li
+                      >
+                      <li class="card-body__list"
+                        >Acoustic system BELL Sub 1000W x 2</li
+                      >
+                      <li class="card-body__list"
+                        >Front monitor Yamaha SM12V 300w x 2</li
+                      >
+                      <li class="card-body__list"
+                        >Backside monitor Dynacord 500W x 2</li
+                      >
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card">
+                <div class="card-header" id="headingTwo">
+                  <h5 class="mb-0">
+                    <button
+                      class="btn btn-link collapsed"
+                      type="button"
+                      data-toggle="collapse"
+                      data-target="#collapseTwo"
+                      aria-expanded="false"
+                      aria-controls="collapseTwo"
+                    >
+                      Amplifier
+                    </button>
+                  </h5>
+                </div>
+                <div
+                  id="collapseTwo"
+                  class="collapse"
+                  aria-labelledby="headingTwo"
+                  data-parent="#accordionExample"
+                >
+                  <div class="card-body">
+                    <ul>
+                      <li class="card-body__list"
+                        >Acoustic system BELL Top 600W x 2</li
+                      >
+                      <li class="card-body__list"
+                        >Acoustic system BELL Mid 600W x 2</li
+                      >
+                      <li class="card-body__list"
+                        >Acoustic system BELL Sub 1000W x 2</li
+                      >
+                      <li class="card-body__list"
+                        >Front monitor Yamaha SM12V 300w x 2</li
+                      >
+                      <li class="card-body__list"
+                        >Backside monitor Dynacord 500W x 2</li
+                      >
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header" id="headingThree">
+                  <h5 class="mb-0">
+                    <button
+                      class="btn btn-link collapsed"
+                      type="button"
+                      data-toggle="collapse"
+                      data-target="#collapseThree"
+                      aria-expanded="false"
+                      aria-controls="collapseThree"
+                    >
+                      FOH
+                    </button>
+                  </h5>
+                </div>
+                <div
+                  id="collapseThree"
+                  class="collapse"
+                  aria-labelledby="headingThree"
+                  data-parent="#accordionExample"
+                >
+                  <div class="card-body">
+                    <ul>
+                      <li class="card-body__list"
+                        >Acoustic system BELL Top 600W x 2</li
+                      >
+                      <li class="card-body__list"
+                        >Acoustic system BELL Mid 600W x 2</li
+                      >
+                      <li class="card-body__list"
+                        >Acoustic system BELL Sub 1000W x 2</li
+                      >
+                      <li class="card-body__list"
+                        >Front monitor Yamaha SM12V 300w x 2</li
+                      >
+                      <li class="card-body__list"
+                        >Backside monitor Dynacord 500W x 2</li
+                      >
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card">
+                <div class="card-header" id="headingFour">
+                  <h5 class="mb-0">
+                    <button
+                      class="btn btn-link collapsed"
+                      type="button"
+                      data-toggle="collapse"
+                      data-target="#collapseFour"
+                      aria-expanded="false"
+                      aria-controls="collapseFour"
+                    >
+                      Backline
+                    </button>
+                  </h5>
+                </div>
+                <div
+                  id="collapseFour"
+                  class="collapse"
+                  aria-labelledby="headingFour"
+                  data-parent="#accordionExample"
+                >
+                  <div class="card-body">
+                    <ul>
+                      <li class="card-body__list"
+                        >Acoustic system BELL Top 600W x 2</li
+                      >
+                      <li class="card-body__list"
+                        >Acoustic system BELL Mid 600W x 2</li
+                      >
+                      <li class="card-body__list"
+                        >Acoustic system BELL Sub 1000W x 2</li
+                      >
+                      <li class="card-body__list"
+                        >Front monitor Yamaha SM12V 300w x 2</li
+                      >
+                      <li class="card-body__list"
+                        >Backside monitor Dynacord 500W x 2</li
+                      >
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card">
+                <div class="card-header" id="headingFive">
+                  <h5 class="mb-0">
+                    <button
+                      class="btn btn-link collapsed"
+                      type="button"
+                      data-toggle="collapse"
+                      data-target="#collapseFive"
+                      aria-expanded="false"
+                      aria-controls="collapseFive"
+                    >
+                      Microphone set
+                    </button>
+                  </h5>
+                </div>
+                <div
+                  id="collapseFive"
+                  class="collapse"
+                  aria-labelledby="headingFive"
+                  data-parent="#accordionExample"
+                >
+                  <div class="card-body">
+                    <ul>
+                      <li class="card-body__list"
+                        >Acoustic system BELL Top 600W x 2</li
+                      >
+                      <li class="card-body__list"
+                        >Acoustic system BELL Mid 600W x 2</li
+                      >
+                      <li class="card-body__list"
+                        >Acoustic system BELL Sub 1000W x 2</li
+                      >
+                      <li class="card-body__list"
+                        >Front monitor Yamaha SM12V 300w x 2</li
+                      >
+                      <li class="card-body__list"
+                        >Backside monitor Dynacord 500W x 2</li
+                      >
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card">
+                <div class="card-header" id="headingSix">
+                  <h5 class="mb-0">
+                    <button
+                      class="btn btn-link collapsed"
+                      type="button"
+                      data-toggle="collapse"
+                      data-target="#collapseSix"
+                      aria-expanded="false"
+                      aria-controls="collapseSix"
+                    >
+                      DJ equipment
+                    </button>
+                  </h5>
+                </div>
+                <div
+                  id="collapseSix"
+                  class="collapse"
+                  aria-labelledby="headingSix"
+                  data-parent="#accordionExample"
+                >
+                  <div class="card-body">
+                    <ul>
+                      <li class="card-body__list"
+                        >Acoustic system BELL Top 600W x 2</li
+                      >
+                      <li class="card-body__list"
+                        >Acoustic system BELL Mid 600W x 2</li
+                      >
+                      <li class="card-body__list"
+                        >Acoustic system BELL Sub 1000W x 2</li
+                      >
+                      <li class="card-body__list"
+                        >Front monitor Yamaha SM12V 300w x 2</li
+                      >
+                      <li class="card-body__list"
+                        >Backside monitor Dynacord 500W x 2</li
+                      >
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="section-4-block">
+            <h3 class="title_s-4"
+              >ЗВУКОРЕЖИССЕРЫ <br />
+              КЛУБА МАНХЭТТЕН</h3
+            >
+
+            <div class="section-4-two-blocks">
+              <div class="section-4-one-block">
+                <img src="./img/home_page/section-4-isotov.png" alt="isotov" />
+                <p class="section-4__names"
+                  >ИЗОТОВ <br />
+                  КОНСТАНТИН</p
+                >
+                <div class="section-4-media">
+                  <a href="#" class="btn"
+                    ><img src="./img/icons/vk.svg" alt="vk"
+                  /></a>
+                  <a href="#" class="btn"
+                    ><img src="./img/icons/telegram.svg" alt="telegram"
+                  /></a>
+                </div>
+              </div>
+
+              <div class="section-4-one-block">
+                <img src="./img/home_page/section-4-joziev.png" alt="joziev" />
+                <p class="section-4__names"
+                  >ДАВИД <br />
+                  ХОЗИЕВ</p
+                >
+                <div class="section-4-media">
+                  <a href="#" class="btn"
+                    ><img src="./img/icons/vk.svg" alt="vk"
+                  /></a>
+                  <a href="#" class="btn"
+                    ><img src="./img/icons/telegram.svg" alt="telegram"
+                  /></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="container section section-contacts">
+        <a href="#" class="btn-1" name="place">TOP "MANHATTAN" PLACE</a>
+
+        <h2 class="title">КОНТАКТЫ</h2>
+
+        <div class="section-contacts-blocks">
+          <div class="section-contacts-block-1">
+            <h3 class="btn-link section-contacts__text">Адрес</h3>
+            <p class="section-contacts__text"
+              >Набережная реки Фонтанки, 90 (вход в арке с белыми колоннами)</p
+            >
+            <h3 class="btn-link section-contacts__text">телефон</h3>
+            <p class="section-contacts__text">+7 (812) 713-1945</p>
+            <h3 class="btn-link section-contacts__text">режим работы</h3>
+            <p class="section-contacts__text">Ежедневно с 12:00 до 06:00</p>
+            <br />
+            <br />
+            <hr />
+            <br />
+            <h3 class="btn-link section-contacts__text">директор</h3>
+            <p class="section-contacts__text"
+              >Лидия Эмильевна, +7(921) 963-55-50</p
+            >
+            <h3 class="btn-link section-contacts__text">арт-директор</h3>
+            <p class="section-contacts__text"
+              >Илиния Ионашко, +7(981) 989-43-30</p
+            >
+          </div>
+
+          <div class="section-contacts-block-2">
+            <img
+              src="./img/map.png"
+              alt="map"
+              class="section-contacts__image"
+            />
+          </div>
+        </div>
+
+        <hr />
+      </section>
     </main>
 
     <footer class="footer container">
-        <p class="footer__rights">Copyright © 2022. Все права защищены.</p>
-        <p class="footer__right">Разработано d-e-n.ru</p>
+      <p class="footer__rights">Copyright © 2022. Все права защищены.</p>
+      <p class="footer__right">Разработано d-e-n.ru</p>
     </footer>
 
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
 
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
 
     <script type="module" src="./js/swiper.js"></script>
 
     <script src="./js/menu.js"></script>
-
-</body>
+  </body>
 </html>

@@ -824,6 +824,9 @@ h3 {
     margin-bottom: 7rem;
     padding-right: 4rem;
   }
+  .footer {
+    padding: 3rem;
+  }
 }
 @media only screen and (max-width: 980px) {
   .section-1__poster-container {
