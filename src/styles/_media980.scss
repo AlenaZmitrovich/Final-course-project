@@ -1,0 +1,36 @@
+@media only screen and (max-width: 980px) {
+
+    .section-1__poster {
+
+        &-container {
+            gap: 0.5rem;
+            margin: $m-3 $m-1 $m-7;
+        }
+    }
+
+    .section-contacts {
+        margin-top: $m-3;
+    }
+
+    .products-1 {
+        margin: 0 0 0 $m-2;
+    }
+
+    .products-2 {
+        margin: 0 $m-3 0 0;
+    }
+
+    .section-gallery {
+        padding-left: $p-4;
+        padding-right: $p-4;
+
+        &-block {
+            grid-template-columns: 1fr 1fr;
+            gap: 7rem 0;
+        }
+    }
+
+    .footer {
+        padding: $m-1 $m-3;
+    }
+}

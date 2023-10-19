@@ -1,0 +1,21 @@
+@mixin flex () {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin transition {
+    transition: all .3s;
+}
+
+@mixin container {
+    max-width: 1296px;
+    margin: 0 auto;
+}
+
+@mixin text {
+    font-weight: $font-w-400;
+    font-size: $font-14;
+    line-height: 21px;
+    color: $color-white;
+}

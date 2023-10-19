@@ -1,0 +1,23 @@
+.card{
+    background-color: $secondary-color;
+    margin: $m-2;
+
+    &-body{
+        font-weight: $font-w-400;
+        font-size: $font-14;
+        line-height: 21px;
+        color: $color-white;
+        text-align: left;
+        padding: 3rem;
+        border-spacing: 14px;
+
+        &__list{
+            list-style-type: disc;
+            margin: $m-1 $m-2;
+        }
+    }
+}
+
+.mb-0{
+    text-align: left;
+}

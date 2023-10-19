@@ -1,0 +1,23 @@
+.form {
+    padding: $p-3;
+    background-color: $primary-color;
+    
+    &-label {
+        padding: $p-1 0;
+    }
+}
+
+option {
+    background-color: $secondary-color;
+}
+
+input,
+select {
+    background-color: $secondary-color !important;
+    border-color: $secondary-color !important;
+
+    &:focus{
+        color: $color-white !important;
+        background-color: $secondary-color !important;
+     }
+}

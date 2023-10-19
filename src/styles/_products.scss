@@ -1,0 +1,48 @@
+.product{
+    @include flex();
+    margin-bottom: $m-7;
+}
+
+.products{
+    width: calc(100% / 2);
+    margin-left: $m-4;
+    margin-right: $m-4;
+
+    &-item{
+        @include flex();
+    }
+
+    &-photo{
+        margin: $m-2;
+    }
+
+    &-top{
+        @include flex();
+    }
+
+    &__name{
+        font-weight: $font-w-700;
+        font-size: $font-18;
+        line-height: 27px;
+        letter-spacing: .1rem;
+        color: $color-white;
+    }
+
+    &-bottom{
+        text-align: left;
+    }
+
+    &__weight{
+        font-weight: $font-w-400;
+        font-size: $font-14;
+        line-height: 21px;
+        color: $secondary-color;
+    }
+
+    &__description{
+        font-weight: $font-w-400;
+        font-size: $font-14;
+        line-height: 21px;
+        color: $color-white;
+    }
+}

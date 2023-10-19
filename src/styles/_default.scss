@@ -1,0 +1,77 @@
+::-webkit-scrollbar {
+    width: 3px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: $secondary-color;
+}
+
+html,
+body {
+    font-family: $font-family;
+    font-size: $font-14;
+
+    background: $primary-color;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+
+    animation-duration: 3s;
+    animation-name: slidein;
+}
+
+
+
+@keyframes slidein {
+    from {
+      margin-left: 100%;
+      width: 300%;
+    }
+  
+    to {
+      margin-left: 0%;
+      width: 100%;
+    }
+  }
+
+a:hover {
+    text-decoration: none;
+    transition: 0.5s;
+    color: $color-hover;
+}
+
+button:hover {
+    text-decoration: none;
+    transition: 0.5s;
+    color: $color-hover;
+}
+
+.container {
+    @include container();
+}
+
+.title{
+    font-weight: $font-w-700;
+    font-size: $font-40;
+    line-height: 60px;
+    letter-spacing: .1rem;
+    color: $color-white;
+
+    margin-top: $m-4;
+    margin-bottom: $m-4;
+
+    &_s-4 {
+        margin: $m-2;
+        margin-bottom: $m-3;
+        font-size: $font-32;
+        line-height: 48px;
+    }
+}
+
+.poster {
+    margin-top: $m-1-5;
+    
+}
+
+hr {
+    border: 1px solid $color-white-1;
+}

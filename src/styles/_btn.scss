@@ -1,0 +1,88 @@
+.btn{
+    font-weight: $font-w-400;
+    font-size: $font-14;
+    color: $color-white !important;
+    letter-spacing: .1rem;
+    border: 2px solid $secondary-color;
+    border-radius: 5px;
+    padding: $p-1 $p-2;
+
+    &-modal {
+        background-color: $primary-color;
+
+        &:hover {
+            background-color: $primary-color;
+            color: $color-hover !important;
+            border-color: $secondary-color;
+        }
+    }
+
+    &-primary {
+        background-color: $primary-color;
+
+        &:hover {
+            background-color: $primary-color;
+            color: $color-hover !important;
+            border-color: $secondary-color;
+        }
+    }
+
+    &_news {
+        margin-left: $m-3;
+        margin-bottom: $m-1;
+
+        &--margin {
+            margin-top: $m-1;
+        }
+    }
+}
+
+.btn-1{
+    background-color: $color-white;
+    color: $color-black-1;
+    font-weight: $font-w-700;
+    font-size: $font-14;
+    line-height: 21px;
+    letter-spacing: .1rem;
+    border-radius: 5px;
+    padding: $p-1 $p-2;
+}
+
+.btn-2{
+    font-weight: $font-w-700;
+    font-size: $font-18;
+    line-height: 27px;
+    letter-spacing: .1rem;
+    color: $color-white;
+    background-color: $secondary-color;
+    padding: $p-2 $p-3;
+    border-radius: 5px;
+}
+
+.btn-link {
+    font-weight: $font-w-700;
+    font-size: $font-18;
+    line-height: 27px;
+    letter-spacing: .1rem;
+    color: $color-white;
+    text-transform: uppercase;
+
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+.btn-3 {
+    font-weight: $font-w-700;
+    font-size: $font-14;
+    line-height: 21px;
+    letter-spacing: .1rem;
+    color: $color-white;
+    border-radius: 5px;
+    padding: $p-1 $p-2;
+    background-color: $secondary-color;
+
+    &:hover {
+        color: $color-white;
+    }
+}
